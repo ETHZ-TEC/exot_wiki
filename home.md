@@ -10,7 +10,7 @@ Thermal Covert Channel[^1], Power Covert Channel[^2], Frequency Covert Channel[^
 This section contains general information on the Karajan software suite, its purpose and a rough overview of the functionality.
 
 1. [Framework Overview](0.-General/Framework-overview.md)
-1. [Available Platrforms @ TEC](0.-General/platforms.md)
+1. [Available Platforms @ TEC](0.-General/platforms.md)
 
 #### The Application Library
 Here, general information on the application library is given. 
