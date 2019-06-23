@@ -6,7 +6,7 @@ The library implements a subset of the *process network* model of computation, a
 
 ![The process network model](../uploads/figures/process-network.png)
 
-For further information about the library's design considerations please refer to the [original thesis](Blob/app_lib_thesis.pdf).
+For further information about the library's design considerations please refer to the [original thesis](../uploads/documents/app_lib_thesis.pdf).
 
 The core framework of the library [provides](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/tree/master/include/covert/framework) the building blocks necessary for using the *process network* model:
 

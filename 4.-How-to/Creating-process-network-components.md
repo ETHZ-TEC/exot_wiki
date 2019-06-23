@@ -35,11 +35,11 @@ Seeing these class templates for the first time can be a bit intimidating. Howev
 
 The basic principle behind such a definition is that the template parameters are passed rightwards to subsequent parameters. Writing:
 
-![](../Images/node-2.png)
+![](../uploads/figures/node-2.png)
 
 "Expands" it to:
 
-![](../Images/node-1.png)
+![](../uploads/figures/node-1.png)
 
 Therefore, instead of writing:
 
