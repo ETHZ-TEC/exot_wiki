@@ -1,10 +1,10 @@
 The design of the library and the core framework is motivated by the typical channel model found in this field of research, shown below.
 
-![A typical channel model](../Images/channel-model.png)
+![A typical channel model](../uploads/figures/channel-model.png)
 
 The library implements a subset of the *process network* model of computation, and allows combining the different components of the channel model into linear process networks. One possible realisation of a channel is shown below.
 
-![The process network model](../Images/process-network.png)
+![The process network model](../uploads/figures/process-network.png)
 
 For further information about the library's design considerations please refer to the [original thesis](Blob/app_lib_thesis.pdf).
 
