@@ -9,40 +9,40 @@ Thermal Covert Channel[^1], Power Covert Channel[^2], Frequency Covert Channel[^
 #### General
 This section contains general information on the Karajan software suite, its purpose and a rough overview of the functionality.
 
-1. [Framework Overview](0.-General/Framework-overview.md)
-1. [Available Platforms @ TEC](0.-General/platforms.md)
+1. [Framework Overview](0.-General/Framework-overview)
+1. [Available Platforms @ TEC](0.-General/platforms)
 
 #### The Application Library
 Here, general information on the application library is given. 
 This contains development paradigns, structure, etc.
 
-1. [Available metering modules](1.-The-Application-Library/Available-metering-modules.md)
-1. [Contributing to the library](1.-The-Application-Library/Contributing-to-the-library.md)
-1. [Platform specific primitives](1.-The-Application-Library/Platform-specific-primitives.md)
-1. [Provided components](1.-The-Application-Library/Provided-components.md)
-1. [The core framework](1.-The-Application-Library/The-core-framework.md)
-1. [Using the library](1.-The-Application-Library/Using-the-library.md)
-1. [Utilities](1.-The-Application-Library/Utilities.md)
+1. [Available metering modules](1.-The-Application-Library/Available-metering-modules)
+1. [Contributing to the library](1.-The-Application-Library/Contributing-to-the-library)
+1. [Platform specific primitives](1.-The-Application-Library/Platform-specific-primitives)
+1. [Provided components](1.-The-Application-Library/Provided-components)
+1. [The core framework](1.-The-Application-Library/The-core-framework)
+1. [Using the library](1.-The-Application-Library/Using-the-library)
+1. [Utilities](1.-The-Application-Library/Utilities)
 
 #### The Applications
 An overview of all available applications, their use and there handling is given.
 
-1. [Application Index](2.-The-Applications/Application-Index.md)
+1. [Application Index](2.-The-Applications/Application-Index)
 
 #### The Data Processing Framework
 Here, general information on the dataprocessing framework is given. 
 This contains development paradigns, structure, etc.
 
-1. [The Ecosystem](3.-The-Data-Processing-Framework/The-Ecosystem.md)
+1. [The Ecosystem](3.-The-Data-Processing-Framework/The-Ecosystem)
 
 #### How-to
 This section gives how tos, examples, demos, etc. to make it easier to get started with Karajan.
 
-1. [Assembling metering modules](4.-How-to/Assembling-metering-modules.md)
-1. [Building applications](4.-How-to/Building-applications.md)
-1. [Creating metering modules](4.-How-to/Creating-metering-modules.md)
-1. [Creating process network components](4.-How-to/Creating-process-network-components.md)
-1. [Dockerised build environment](4.-How-to/Dockerised-build-environment.md)
+1. [Assembling metering modules](4.-How-to/Assembling-metering-modules)
+1. [Building applications](4.-How-to/Building-applications)
+1. [Creating metering modules](4.-How-to/Creating-metering-modules)
+1. [Creating process network components](4.-How-to/Creating-process-network-components)
+1. [Dockerised build environment](4.-How-to/Dockerised-build-environment)
 
 ------
 [^1]: Bartolini, D.B., Miedl, P. and Thiele, L., 2016, April. On the capacity of thermal covert channels in multicores. In Proceedings of the Eleventh European Conference on Computer Systems (p. 24). ACM.
