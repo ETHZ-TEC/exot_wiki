@@ -1,7 +1,18 @@
 [Back to Home](/home) 
-___
+__
 
-## Application and Developer Note
+## Base configuration
+All platforms can be accessed using the username `karajan` and the standard password.
+All devices need to be configured to use a [proxy](https://www.ethz.ch/services/de/it-services/katalog/netzwerke-verbindungen/proxy.html).
+In unix, add following lines to the `/etc/environment` file:
+```bash
+http_proxy="http://proxy.ethz.ch:3128/"
+https_proxy="http://proxy.ethz.ch:3128/"
+ftp_proxy="http://proxy.ethz.ch:3128/"
+no_proxy="localhost,127.0.0.1,::1"
+```
+
+For Android devices, the proxy can be set in the WiFi settings.
 
 ## Usable Platforms
 ### Bilbo
@@ -20,7 +31,6 @@ ___
 | MAC-Addresse        | 40:b8:37:c0:44:52                                           |
 | IP-Addresse         | 172.31.43.130                                               |
 | ADB-Port            | 51808                                                       |
-| Username            |                                                             |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
 
@@ -36,11 +46,10 @@ ___
 | General Description | Samsung Galaxy S5                                           |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
 | Operating System    | Android 5.0                                                 |
-| Kernel Version      |                                                             |
+| Kernel Version      | 3.10.9-4521975                                              |
 | MAC-Addresse        | 48:5A:3F:85:05:7C                                           |
 | IP-Addresse         | 172.31.43.131                                               |
 | ADB-Port            | 51808                                                       |
-| Username            |                                                             |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
 
@@ -60,7 +69,6 @@ ___
 | MAC-Addresse        | 44:1c:a8:1d:cb:c5                                           |
 | IP-Addresse         | 172.31.43.132                                               |
 | ADB-Port            | 51808                                                       |
-| Username            |                                                             |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               | Disable SELinux: adb -s 2da22348 shell su root setenforce 0 |
 |                     | There is an registered acount for the intrinsyc support     |
@@ -81,12 +89,11 @@ ___
 |:--------------------|:------------------------------------------------------------|
 | General Description | Ordroid-XU3                                                 |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
-| Operating System    | Ubuntu 14.04.2                                              |
-| Kernel Version      | 3.10.96                                                     |
+| Operating System    | Ubuntu 18.04.2 LTS                                          |
+| Kernel Version      | 4.14.111-158 armv7l                                         |
 | MAC-Addresse        | 00:1e:06:61:7a:39                                           |
 | IP-Addresse         | 172.31.43.133                                               |
 | SSH-Port            | 2237                                                        |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only - no display                                   |
 
@@ -104,7 +111,6 @@ ___
 | MAC-Addresse        | 00:04:4b:a7:bf:ea                                           |
 | IP-Addresse         | 172.31.43.134                                               |
 | SSH-Port            | 51808                                                       |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   |                                                             |
 | Notes               | Console only.                                               |
 
@@ -124,14 +130,15 @@ ___
 | MAC-Addresse        | 28:d2:44:e4:e7:97                                           |
 | IP-Addresse         | 172.31.43.135                                               |
 | SSH-Port            | 51808                                                       |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               | Using GUI, used for real attack scenario leaking data from  |
 |                     | a VM. VM inside Laptop:                                     |
-|                     | Hostname 127.0.0.1                                          |
-|                     | Port 51707                                                  |
-|                     | User:     user                                              |
+|                     | Hostname 127.0.0.1 TODO                                     |
+|                     | Port 51808                                                  |
+|                     | User:     user TODO                                         |
 |                     | Password: user                                              |
+|                     | This laptop also serves as entry point to all android       |
+|                     | devices via adb over USB.                                   |
 
 ### Saruman
 
@@ -144,12 +151,11 @@ ___
 |:--------------------|:------------------------------------------------------------|
 | General Description | Thinkpad T440p (nb-10577)                                   |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
-| Operating System    | Ubuntu 16.04.2                                              |
-| Kernel Version      | 4.4.0-112-generic                                           |
+| Operating System    | Ubuntu 18.04.2 LTS                                          |
+| Kernel Version      | 4.15.0-52-generic x86_64                                    |
 | MAC-Addresse        | 28:d2:44:b5:bd:9d                                           |
 | IP-Addresse         | 172.31.43.136                                               |
 | SSH-Port            | 51808                                                       |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only                                                |
 
@@ -164,12 +170,11 @@ ___
 |:--------------------|:------------------------------------------------------------|
 | General Description | Thinkpad T440p (nb-10548)                                   |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
-| Operating System    | Ubuntu 16.04.2                                              |
-| Kernel Version      | 4.4.0-112-generic (4.9.5+)                                  |
+| Operating System    | Ubuntu 16.04.6 LTS                                          |
+| Kernel Version      | 4.4.0-148-generic x86_64 (4.9.5+)                           |
 | MAC-Addresse        | 28:d2:44:54:00:dc                                           |
 | IP-Addresse         | 172.31.43.137                                               |
 | SSH-Port            | 51808                                                       |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only                                                |
 
@@ -183,12 +188,11 @@ ___
 |:--------------------|:------------------------------------------------------------|
 | General Description | Thinkpad T440p (nb-10539)                                   |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
-| Operating System    | Ubuntu 16.04.4                                              |
-| Kernel Version      | 4.4.0-127-generic (4.9.5+)                                  |
+| Operating System    | Ubuntu 18.04.2 LTS                                          |
+| Kernel Version      | 4.15.0-50-generic x86_64 (4.9.5+)                           |
 | MAC-Addresse        | 28:d2:44:4f:ef:66                                           |
 | IP-Addresse         | 172.31.43.138                                               |
 | SSH-Port            | 51808                                                       |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only                                                |
 
@@ -209,7 +213,6 @@ ___
 | MAC-Addresse        |                                                             |
 | IP-Addresse         | 82.130.103.118                                              |
 | SSH-Port            | 7820                                                        |
-| Username            | NETHZ username (setup required)                             |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only.                                               |
 
@@ -229,7 +232,6 @@ ___
 | MAC-Addresse        |                                                             |
 | IP-Addresse         | 82.130.102.204                                              |
 | SSH-Port            | 51808                                                       |
-| Username            |                                                             |
 | Physical Location   | Student Lab                                                 |
 | Note                | Disable SELinux: adb -s 414f2238 shell su root setenforce 0 |
 
