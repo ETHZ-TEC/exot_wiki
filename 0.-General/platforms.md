@@ -13,6 +13,14 @@ no_proxy="localhost,127.0.0.1,::1"
 ```
 
 For Android devices, the proxy can be set in the WiFi settings.
+Sometimes the time setting fails, then use following command:
+```bash
+adb -s [ADB-ID] shell "su 0 toybox date $(date "+%m%d%H%M%Y.%S")"
+```
+To disable the SELinux layer on Android, use following command:
+```bash
+adb -s [ADB-ID] shell su root setenforce 0
+```
 
 ## Usable Platforms
 ### Bilbo
@@ -30,6 +38,7 @@ For Android devices, the proxy can be set in the WiFi settings.
 | Kernel Version      | 3.10.49-perf-g6b847e2                                       |
 | MAC-Addresse        | 40:b8:37:c0:44:52                                           |
 | IP-Addresse         | 172.31.43.130                                               |
+| ADB-ID              | CB5A28J729                                                  |
 | ADB-Port            | 51808                                                       |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
@@ -49,6 +58,7 @@ For Android devices, the proxy can be set in the WiFi settings.
 | Kernel Version      | 3.10.9-4521975                                              |
 | MAC-Addresse        | 48:5A:3F:85:05:7C                                           |
 | IP-Addresse         | 172.31.43.131                                               |
+| ADB-ID              | 3208dc2fa4fa518b                                            |
 | ADB-Port            | 51808                                                       |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
@@ -68,10 +78,10 @@ For Android devices, the proxy can be set in the WiFi settings.
 | Kernel Version      |                                                             |
 | MAC-Addresse        | 44:1c:a8:1d:cb:c5                                           |
 | IP-Addresse         | 172.31.43.132                                               |
+| ADB-ID              | 2da22348                                                    |
 | ADB-Port            | 51808                                                       |
 | Physical Location   | Office ETZ G76                                              |
-| Notes               | Disable SELinux: adb -s 2da22348 shell su root setenforce 0 |
-|                     | There is an registered acount for the intrinsyc support     |
+| Notes               | There is an registered acount for the intrinsyc support     |
 |                     | webpage (http://support.intrinsyc.com/login). The support   |
 |                     | webpage has several software/documents which may be useful  |
 |                     | for us. The login credentials are:                          | 
