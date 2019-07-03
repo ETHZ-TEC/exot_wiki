@@ -1,5 +1,4 @@
-[Back to Home](/home) 
-__
+[Back to Home](/home)
 
 ## Base configuration
 All platforms can be accessed using the username `karajan` and the standard password.
