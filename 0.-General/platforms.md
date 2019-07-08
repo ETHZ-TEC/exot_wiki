@@ -205,6 +205,26 @@ adb -s [ADB-ID] shell su root setenforce 0
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only                                                |
 
+### Sam
+
+|  Currently used by  |    from    |    till    |
+|:--------------------|:----------:|:----------:|
+|                     |            |            |
+
+
+| Characteristic      | Value                                                       |
+|:--------------------|:------------------------------------------------------------|
+| General Description | DragonBoard 810 (pc-10656)                                  |
+| Administrators      | Philipp Miedl (ETZ G76)                                     |
+| Operating System    | Android 5.0 developer version                               |
+| Kernel Version      | 172.31.43.139                                               |
+| MAC-Addresse        | d8:5d:e2:24:7a:bb                                           |
+| IP-Addresse         | 82.130.102.204                                              |
+| SSH-Port            | 51808                                                       |
+| Physical Location   | Student Lab                                                 |
+| Note                | Disable SELinux: adb -s 414f2238 shell su root setenforce 0 |
+
+
 ## Old Devices
 
 ### Sauron
@@ -224,23 +244,3 @@ adb -s [ADB-ID] shell su root setenforce 0
 | SSH-Port            | 7820                                                        |
 | Physical Location   | Server Room ETZ G60.5                                       |
 | Notes               | Console only.                                               |
-
-### Sam (DEAD?)
-
-|  Currently used by  |    from    |    till    |
-|:--------------------|:----------:|:----------:|
-| Philipp Miedl       |       -    |      -     |
-
-
-| Characteristic      | Value                                                       |
-|:--------------------|:------------------------------------------------------------|
-| General Description | DragonBoard 810 (pc-10656)                                  |
-| Administrators      | Philipp Miedl (ETZ G76)                                     |
-| Operating System    | Android 5.0 developer version                               |
-| Kernel Version      |                                                             |
-| MAC-Addresse        |                                                             |
-| IP-Addresse         | 82.130.102.204                                              |
-| SSH-Port            | 51808                                                       |
-| Physical Location   | Student Lab                                                 |
-| Note                | Disable SELinux: adb -s 414f2238 shell su root setenforce 0 |
-
