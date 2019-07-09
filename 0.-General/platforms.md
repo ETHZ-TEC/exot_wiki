@@ -11,6 +11,7 @@ ftp_proxy="http://proxy.ethz.ch:3128/"
 no_proxy="localhost,127.0.0.1,::1"
 ```
 
+## Android specifics
 For Android devices, the proxy can be set in the WiFi settings.
 Sometimes the time setting fails, then use following command:
 ```bash
@@ -21,6 +22,9 @@ To disable the SELinux layer on Android and enable root access on the Dragonboar
 adb -s [ADB-ID] shell su root setenforce 0
 adb -s [ADB-ID] root
 ```
+
+The common Google user for all platforms for app purchase etc. is `karajan.tec.eth@gmail.com`.
+Furthermore, every android platform also has its own email address for apps, which is `[Platform-Name].karajan.tec.eth@gmail.com`.
 
 ## Usable Platforms
 ### Bilbo
