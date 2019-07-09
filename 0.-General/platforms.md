@@ -222,9 +222,9 @@ Furthermore, every android platform also has its own email address for apps, whi
 | General Description | DragonBoard 810 (pc-10656)                                  |
 | Administrators      | Philipp Miedl (ETZ G76)                                     |
 | Operating System    | Android 5.0 developer version                               |
-| Kernel Version      | 172.31.43.139                                               |
+| Kernel Version      |                                                             |
 | MAC-Addresse        | d8:5d:e2:24:7a:bb                                           |
-| IP-Addresse         | 82.130.102.204                                              |
+| IP-Addresse         | 172.31.43.139                                               |
 | SSH-Port            | 51808                                                       |
 | Physical Location   | Student Lab                                                 |
 | Note                | Disable SELinux: adb -s 414f2238 shell su root setenforce 0 |
