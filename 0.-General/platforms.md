@@ -16,9 +16,10 @@ Sometimes the time setting fails, then use following command:
 ```bash
 adb -s [ADB-ID] shell "su 0 toybox date $(date "+%m%d%H%M%Y.%S")"
 ```
-To disable the SELinux layer on Android, use following command:
+To disable the SELinux layer on Android and enable root access on the Dragonboards, use following command:
 ```bash
 adb -s [ADB-ID] shell su root setenforce 0
+adb root
 ```
 
 ## Usable Platforms
