@@ -13,18 +13,43 @@ no_proxy="localhost,127.0.0.1,::1"
 
 ## Android specifics
 For Android devices, the proxy can be set in the WiFi settings.
+
+The common Google user for all platforms for app purchase etc. is `karajan.tec.eth@gmail.com`.
+Furthermore, every android platform also has its own email address for apps, which is `[Platform-Name].karajan.tec.eth@gmail.com`.
+
+### Time
 Sometimes the time setting fails, then use following command:
 ```bash
 adb -s [ADB-ID] shell "su 0 toybox date $(date "+%m%d%H%M%Y.%S")"
 ```
+
+### SELinux (Dragonboards)
 To disable the SELinux layer on Android and enable root access on the Dragonboards, use following command:
 ```bash
 adb -s [ADB-ID] shell su root setenforce 0
 adb -s [ADB-ID] root
 ```
 
-The common Google user for all platforms for app purchase etc. is `karajan.tec.eth@gmail.com`.
-Furthermore, every android platform also has its own email address for apps, which is `[Platform-Name].karajan.tec.eth@gmail.com`.
+### Enable remounting filesystems (Dragonboards)
+to enable "ADB remount" on the Dragonboard 810 dev kit
+
+Actually, this is expected behavior to fail to remount system partition.
+"dm-verity" feature is enabled in the msm8994-MM build for security reason.
+Using new adb version, we can disable verity and get remount working with below commands.
+
+```
+adb root
+adb disable-verity
+adb reboot
+```
+
+Once system is rebooted, dm-verity is disabled.
+Then adb remount would be working with below commands.
+
+```
+adb root
+adb remount
+```
 
 ## Usable Platforms
 ### Bilbo
