@@ -28,6 +28,7 @@ This contains development paradigns, structure, etc.
 An overview of all available applications, their use and there handling is given.
 
 1. [Application Index](2.-The-Applications/Application-Index)
+1. [Android Intent Proxy](2.-The-Applications/Android Intent Proxy)
 
 #### The Data Processing Framework
 Here, general information on the dataprocessing framework is given. 
