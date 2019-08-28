@@ -116,6 +116,7 @@ adb remount
 |                     | for us. The login credentials are:                          | 
 |                     | username: ethdragon                                         |
 |                     | passwd: fingerprinting                                      |
+|                     | Display broken, need to connect mouse and HDMI screen.      |
 
 ### Pippin
 
