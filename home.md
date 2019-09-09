@@ -1,13 +1,13 @@
 # App Lib library
 
-Welcome to the Karajan software suite knowledge base. 
-The Karajan software suite was build to orchestrate experiments for the evaluation of covert channels in multicore systems (e.g. 
+Welcome to the Experiment Orchestration Toolkit, short ExOT, knowledge base. 
+ExOT was build to orchestrate experiments for the evaluation of covert channels in multicore systems (e.g. 
 Thermal Covert Channel[^1], Power Covert Channel[^2], Frequency Covert Channel[^3]).
 
 # ToC
 
 #### General
-This section contains general information on the Karajan software suite, its purpose and a rough overview of the functionality.
+This section contains general information on ExOT, its purpose and a rough overview of the functionality.
 
 1. [Framework Overview](0.-General/Framework-overview)
 1. [Available Platforms @ TEC](0.-General/platforms)
