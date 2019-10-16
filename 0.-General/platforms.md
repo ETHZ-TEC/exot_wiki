@@ -118,6 +118,42 @@ adb remount
 |                     | passwd: fingerprinting                                      |
 |                     | Display broken, need to connect mouse and HDMI screen.      |
 
+#### Thermal Zones
+*  0, bms (Battery Management System)
+*  1, battery
+*  2, tens_tz_sensor0
+*  3, tens_tz_sensor1
+*  4, pop_mem
+*  5, tens_tz_sensor3
+*  6, tens_tz_sensor4
+*  7, tens_tz_sensor5
+*  8, cpu7
+*  9, cpu0
+* 10, cpu1
+* 11, cpu2
+* 12, cpu3
+* 13, tsense_tz_sensor11
+* 14, gpu
+* 15, cpu4
+* 16, cpu5
+* 17, cpu6
+* 18, pm8994_tz (Power Management Chip)
+* 19, msm_therm (Mobile Station Modem)
+* 20, emmc_therm
+* 21, pa_therm0
+* 22, pa_therm1
+* 23, quiet_therm
+* 24, LLM_IA57
+* 25, THRM_57-0
+* 26, THRM_57-1
+* 27, THRM_57-2
+* 28, THRM_57-3
+* 29, THRM_53-0
+* 30, THRM_53-1
+* 31, THRM_53-2
+* 32, THRM_53-3
+
+
 ### Pippin
 
 |  Currently used by  |    from    |    till    |
