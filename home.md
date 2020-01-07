@@ -44,6 +44,7 @@ This section gives how tos, examples, demos, etc. to make it easier to get start
 1. [Creating metering modules](4.-How-to/Creating-metering-modules)
 1. [Creating process network components](4.-How-to/Creating-process-network-components)
 1. [Dockerised build environment](4.-How-to/Dockerised-build-environment)
+1. [Code style and formatting](4.-How-to/Code-style-and-formatting)
 
 ------
 [^1]: Bartolini, D.B., Miedl, P. and Thiele, L., 2016, April. On the capacity of thermal covert channels in multicores. In Proceedings of the Eleventh European Conference on Computer Systems (p. 24). ACM.
