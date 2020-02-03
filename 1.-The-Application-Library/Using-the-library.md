@@ -2,8 +2,8 @@
 
 This project uses [CMake](https://cmake.org/) as the build tool. It is
 strongly encouraged that CMake is used for building all software based on the
-library. The project's build configuration file defines a library target
-called **covert**.
+library. The project's build configuration file defines the library target
+called **exot** and a separate target that includes all modules: **exot-modules**.
 
 The library requires a number of third-party libraries:
 [fmt](https://github.com/fmtlib/fmt) for string formatting,
@@ -27,9 +27,72 @@ add_subdirectory(<path/to/library>)
 
 # ...
 
-target_link_libraries(<target/name> covert)
+target_link_libraries(<target/name> exot)
+# target_link_libraries(<target/name> exot exot-modules)
 
 ```
+
+### Configuration
+
+The library's CMakeLists.txt file provides a number of configuration parameters. During the configuration step of CMake's workflow, all configured options will be clearly printed to the console. The parameters determine general options for the library, functionality of certain components, and the characteristics of the default timing source.
+
+These values can be set from the console during the invocation of the configuration step of the CMake workflow, by passing, for example, `-DMETER_SET_AFFINITY=1` or `-DEXOT_TIME_SOURCE=4`.
+
+#### General
+
+Three general options for the ExOT library project, set with either `ON` or `OFF`, are:
+
+| Name | Default value | Description |
+| --- | --- | --- |
+| `exot_use_fibers` | `OFF` | Enable and use `Boost::fiber`? |
+| `enable_clang_format` | `ON` | Enable and use code auto-formatting? |
+| `enable_clang_tidy` | `OFF` | Use the static analyser? |
+
+#### Functional
+
+The options that enable or disable certain functionalities of generators and meter hosts, set with either `0` or `1` (for *off* and *on*, respectively), are:
+
+| Name | Default value | Description |
+| --- | --- | --- |
+| `GENERATOR_HOST_PERFORM_VALIDATION` | `0` | Perform token validation? |
+| `GENERATOR_HOST_PROVIDE_TIMING_STATISTICS` | `0` | Provide time keeper statistics? |
+| `METER_SET_AFFINITY` | `1` | Set meter host affinity? |
+| `METER_USE_STATISTICS` | `0` | Provide time keeper statistics? |
+| `METER_LOG_SYSTEM_TIME` | `0` | Log system time? |
+| `METER_NOW_FROM_TIMER` | `1` | Take timestamp from time keeper? |
+
+#### Timing
+
+Notably, the build file defines the two options, which configure the default timing source and serialisation.
+
+```cmake
+set(EXOT_TIME_FENCE 0 CACHE STRING "The default timing fence")
+set(EXOT_TIME_SOURCE 4 CACHE STRING "The default timing source")
+set_property(CACHE EXOT_TIME_FENCE PROPERTY STRINGS 0 1 2 3)
+set_property(CACHE EXOT_TIME_SOURCE PROPERTY STRINGS 0 1 2 3 4 5)
+```
+
+| Value | Name | Description |
+| --- | --- | --- |
+| 0 | *SteadyClock* | Clock using the `std::chrono::steady_clock` from C++ Standard Template Library |
+| 1 | *MonotonicCounter* | Monotonic counter using the `clock_gettime` function from Linux'es *<time.h>* header with value `CLOCK_MONOTONIC`. |
+| 2 | *MonotonicClock* | Monotonic clock using the `clock_gettime` function from Linux'es *<time.h>* header with value `CLOCK_MONOTONIC`. |
+| 3 | *TimeStampCounter* | A simple counter using the timestamp counter accessed via the `rdtsc` instruction, without very strict serialisation. *Only available on x86_64 architectures.* |
+| 4 | *HardwarePerformanceCounter* | A counter based on Linux'es *perf* events using the hardware CPU performance counter. |
+| 5 | *SoftwarePerformanceCounter* | A counter based on Linux'es *perf* events using the software CPU clock. |
+
+The values for `EXOT_TIME_SOURCE` correspond to the enumeration values in `TimingSourceType` at [exot/utilities/timing_source.h#L33](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/utilities/timing_source.h#L33).
+
+#### Timing serialisation
+
+| Value | Name | Description |
+| --- | --- | --- |
+| 0 | *Atomic* | Atomic fence via C++ STL `atomic_thread_fence` with acquire-release memory order. |
+| 1 | *Weak* | Fencing done via architecture-specific sequence of load and memory fence. |
+| 2 | *Strong* | Fencing done via architecture-specific full fences (e.g. `cpuid` and `mfence` sequence on *x86_64*.) |
+| 3 | *None* | No serialisation applied. |
+
+The values for `EXOT_TIME_FENCE` correspond to the enumeration values in `TimingFenceType` at [exot/utilities/timing_source.h#L23](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/utilities/timing_source.h#L23).
 
 ## Requirements
 
@@ -40,12 +103,12 @@ To successfully compile one needs:
   the GNU libstdc++ from [GCC 8] and higher (libstdc++.so.6.0.23 and higher).
   Please refer to the wiki for [futher guidelines];
 - (optionally) *Boost* libraries, with *Boost/fiber* available,
-  enabled by passing -Dcovert_use_fibers to the CMake command.
+  enabled by passing -Dexot_use_fibers to the CMake command.
 
 [GCC 8]: https://gcc.gnu.org/projects/cxx-status.html#cxx17
 [futher guidelines]: https://gitlab.ethz.ch/tec/research/data_leakage_evaluation/app_lib/wikis/How-to-use-the-library%3F
 
-> __Note__: The new Docker-based container and user-script can be used to obtain a ready development environment capable of cross-compiling. Please refer to the [README](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/tools/docker/README.md), or visit [the how-to article on this wiki](2.-How-to's/Dockerised-build-environment).
+> __Note__: The new Docker-based container and user-script can be used to obtain a ready development environment capable of cross-compiling. Please refer to the [README](https://gitlab.ethz.ch/tec/research/exot/docker_environment), or visit [the how-to article on this wiki](4.-How-to's/Dockerised-build-environment).
 
 ## Toolchains
 
@@ -80,8 +143,8 @@ cmake --build build/Debug --target <target name> -- -j 0
 To build and execute the library tests, run:
 
 ```bash
-cmake --build  <path/to/build> --target covert-test
-./path/to/build/covert/covert-test
+cmake --build  <path/to/build> --target exot-test
+./path/to/build/exot/exot-test
 ```
 
 ## Additional features
@@ -108,7 +171,7 @@ Enabling the *clang-format* code autoformatter and the *clang-tidy* static analy
 
 ### Sanitizers
 
-Sanitizer runtimes can be added to build targets using the *target_add_sanitizer* function. Only compatible sanitizers can be set, an error will be produced if the user attempts to combine incompatible ones. 
+Sanitizer runtimes can be added to build targets using the *target_add_sanitizer* function. Only compatible sanitizers can be set, an error will be produced if the user attempts to combine incompatible ones.
 
 For example, to add the *memory sanitizer* to a target, the user can include in their *CMakeLists.txt* file:
 
