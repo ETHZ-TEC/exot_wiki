@@ -22,7 +22,7 @@ ExOT provides extended software support for the above-mentioned methodology. The
 
 The diagram below shows the general structure of a covert channel evaluation experiment. The __Data Processing Framework__ targets all elements of the experimental flow, except for the sender and receiver applications, which are built on top of the __Application Library__.
 
-![Experiment flow diagram](../uploads/figures/flow.png)
+![Experiment flow diagram](./uploads/figures/flow.png)
 
 #### Application Library
 
@@ -38,6 +38,13 @@ The **Application Library** provides the building blocks for creating applicatio
 1. [Utilities](1.-The-Application-Library/Utilities)
 
 The creation of applications powered by the **Application Library** can be made simpler and more reproducible with the help of the provided [Docker-based build environment](4.-How-to/Dockerised-build-environment). It also provides all the facilities required for cross-compilation.
+
+A number of how-toʼs are relevant to the **Application Library**:
+
+- [Creating metering modules](4.-How-to/Creating-metering-modules)
+- [Creating process network components](4.-How-to/Creating-process-network-components)
+- [Assembling metering modules](4.-How-to/Assembling-metering-modules)
+- [Building applications](4.-How-to/Building-applications)
 
 #### Applications
 
@@ -63,11 +70,6 @@ This section provides how-toʼs, examples, demos, etc. to make it easier to get 
 
 - [Dockerised build environment](4.-How-to/Dockerised-build-environment)
 - [Code style and formatting](4.-How-to/Code-style-and-formatting)
-
-- [Assembling metering modules](4.-How-to/Assembling-metering-modules)
-- [Building applications](4.-How-to/Building-applications)
-- [Creating metering modules](4.-How-to/Creating-metering-modules)
-- [Creating process network components](4.-How-to/Creating-process-network-components)
 
 ---
 
