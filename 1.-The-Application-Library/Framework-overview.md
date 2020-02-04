@@ -2,7 +2,7 @@
 
 The *Application Library* facilitates the creation of sending and receiving applications that interoperate with the entire Experiment Orchestration Toolkit.
 
-The library is implemented in C++17, and takes advantage of many modern language features:
+The library is implemented in C++17, and takes advantage of many modern language features. It broadly uses generic programming and compile-time code generation as well as avoids complex class hierarchies. The library can be rather easily extended. It has been successfully applied in creating sender and receiver applications for, among others, cache-based, thermal, and frequency scaling covert channels.
 
 ## Terminology
 
@@ -32,7 +32,9 @@ The library is implemented in C++17, and takes advantage of many modern language
 
 - __Utilities__ → The library provides a wide range of generic *utilities* that power other parts of the library, but can also be used independently. Examples include functions for working with files and directories, formatting text, performing platform identification, or meta-programming facilities.
 
-- __Configuration__ and __Settings__ → A *settings* structure defines parameters of a __Module__, __Component__ or any other *configurable* object. These settings structures can be *configured* externally from a JSON string or file. A class that can be configured in this way is refered to as a __Configurable__.
+- __Configuration__ and __Settings__ → A *settings* structure defines parameters of a __Module__, __Component__ or any other *configurable* object. These settings structures can be *configured* externally from a JSON string or file. A class that can be configured in this way is refered to as a __Configurable__. A *configurable* has its own namespace for accessing parameters in the __Config__.
+
+- __Config__: The *config* is JSON-formatted data that can be provided to __Configurable__ *modules* and *components*, which access their respective data using their pre-defined namespaces. All JSON data types can be read into many data types in the C++ STL.
 
 ## Structure
 

@@ -45,7 +45,7 @@ The following pages give an overview of all available applications and their usa
 
 - [Unix application index](2.-The-Applications/Application-Index)
 - [Android application index](2.-The-Applications/Android-Application-Index)
-- [Android Intent Proxy](2.-The-Applications/Android Intent Proxy)
+- [Android Intent Proxy](2.-The-Applications/Android-Intent-Proxy)
 
 #### Data Processing Framework
 
@@ -63,8 +63,6 @@ This section provides how-toʼs, examples, demos, etc. to make it easier to get 
 
 - [Dockerised build environment](4.-How-to/Dockerised-build-environment)
 - [Code style and formatting](4.-How-to/Code-style-and-formatting)
-
->
 
 - [Assembling metering modules](4.-How-to/Assembling-metering-modules)
 - [Building applications](4.-How-to/Building-applications)
