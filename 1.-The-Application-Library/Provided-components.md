@@ -4,6 +4,7 @@
 1. [Schedule reader](#Schedule-reader)
 1. [Meter host w/ logger](#Meter-host-with-a-logger)
 1. [Generator host](#Generator-host)
+1. [Other](#Other)
 
 ### Logging
 
