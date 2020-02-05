@@ -62,3 +62,7 @@ The project's main namespace is `exot`. It is further divided into sub-namespace
 - `exot::utilities` for all utilities.
 
 Occassionally, inline namespaces or special `details` namespaces are used. These are considered internal.
+
+---
+
+On the next page, you will find out how to include the library in your C++ project → [Using the library](./Using-the-library).

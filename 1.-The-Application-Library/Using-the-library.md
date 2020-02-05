@@ -1,3 +1,5 @@
+# Using the library
+
 ## CMake
 
 This project uses [CMake](https://cmake.org/) as the build tool. It is
@@ -146,6 +148,12 @@ To build and execute the library tests, run:
 cmake --build  <path/to/build> --target exot-test
 ./path/to/build/exot/exot-test
 ```
+
+---
+
+On the next page, you will find out how to contribute to the library → [Contributing to the library](./Contributing-to-the-library).
+
+---
 
 ## Additional features
 

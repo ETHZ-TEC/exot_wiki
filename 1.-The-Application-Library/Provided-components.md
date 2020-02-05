@@ -91,6 +91,8 @@ using reader_t =
 
 The meter host combines a number of metering modules into a single component. The modules only need to be provided as template parameters. Since we often combine the meter host with a logger component, these two have been joined for the sake of performance and ease of use. *The plain meter host is also available, but is not as well supported.*
 
+The meter host assembles the readings of individual metering modules into a tuple and timestamps them. It also gathers descriptions from the modules and produces a CSV header.
+
 ###### Example
 
 ```c++

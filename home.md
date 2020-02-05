@@ -28,10 +28,10 @@ The diagram below shows the general structure of a covert channel evaluation exp
 
 The **Application Library** provides the building blocks for creating applications that interoperate well with the rest of the ExOT. The following pages give an overview of the design of the library, describe how it can be used and what kind of facilities it provides.
 
-1. [Design, structure & terminology](1.-The-Application-Library/Framework-overview)
+1. [Overview, structure & terminology](1.-The-Application-Library/Framework-overview)
 1. [Using the library in your project](1.-The-Application-Library/Using-the-library)
 1. [Contributing to the library](1.-The-Application-Library/Contributing-to-the-library)
-1. [The core framework](1.-The-Application-Library/The-core-framework)
+1. [The core framework design](1.-The-Application-Library/The-core-framework)
 1. [Provided components](1.-The-Application-Library/Provided-components)
 1. [Available metering modules](1.-The-Application-Library/Available-metering-modules)
 1. [Platform specific primitives](1.-The-Application-Library/Platform-specific-primitives)
