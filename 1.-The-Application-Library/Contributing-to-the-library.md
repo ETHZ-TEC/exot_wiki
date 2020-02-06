@@ -1,3 +1,5 @@
+# Contributing to the library
+
 The ideal way of working on the library is to follow the [git-flow](https://github.com/nvie/gitflow) workflow, or preferably its simpler alternatives. Gitlab, used for our repository hosting, facilitates such workflows thanks to its issue tracking feature. For further information please refer to:
 
 - [Understsanding the GitHub flow](https://guides.github.com/introduction/flow/index.html),
@@ -15,3 +17,4 @@ The basic principles are:
 - **Tag working code using a proper versioning system**. The version number should be kept in sync with the project version in *CMakeLists.txt*. Creating tagged versions will help importing and using the library in other pieces of software.
 - **Use issue and milestone numbers, commit hashes, and other advanced GitLab-flavoured Markdown features**. These facilitate keeping track of the changes and progress.
 
+Also, please refer to the how-to page ["Code Style and Formatting"](../4.-How-to/Code-style-and-formatting#C++-applications-and-the-application-library), which shows you how to automatically format the code with *clang-format* to conform to our coding style.

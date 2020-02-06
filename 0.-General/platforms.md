@@ -72,6 +72,46 @@ adb remount
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
 
+#### Thermal Zones
+*  0, sony_camera_0
+*  1, sony_camera_1
+*  2, tsens_tz_sensor6, CPU7
+*  3, tsens_tz_sensor7, CPU0
+*  4, tsens_tz_sensor8, CPU1
+*  5, tsens_tz_sensor9, CPU2
+*  6, tsens_tz_sensor10, CPU3
+*  7, tsens_tz_sensor11
+*  8, tsens_tz_sensor12, GPU
+*  9, tsens_tz_sensor13, CPU4
+* 10, tsens_tz_sensor14, CPU5
+* 11, tsens_tz_sensor15, CPU6
+* 12, bms
+* 13, pm8994_tz
+* 14, msm_therm
+* 15, emmc_therm
+* 16, pa_therm0
+* 17, pa_therm1
+* 18, quiet_therm
+* 19, xo_therm
+* 20, battery
+* 21, LLM_IA57
+* 22, THRM_57-0
+* 23, flash_therm
+* 24, THRM_57-1
+* 25, THRM_57-2
+* 26, THRM_57-3
+* 27, THRM_53-0
+* 28, THRM_53-1
+* 29, THRM_53-2
+* 30, THRM_53-3
+* 31, tsens_tz_sensor0
+* 32, tsens_tz_sensor1
+* 33, tsens_tz_sensor2
+* 34, tsens_tz_sensor3
+* 35, tsens_tz_sensor4
+* 36, tsens_tz_sensor5
+
+
 ### Frodo
 
 |  Currently used by  |    from    |    till    |
@@ -91,6 +131,12 @@ adb remount
 | ADB-Port            | 51808                                                       |
 | Physical Location   | Office ETZ G76                                              |
 | Notes               |                                                             |
+
+#### Thermal Zones
+* 0, exynos-therm, CPUs
+* 1, sec-fuelgauge, charging chip
+* 2, battery
+
 
 ### Merry
 
@@ -117,6 +163,42 @@ adb remount
 |                     | username: ethdragon                                         |
 |                     | passwd: fingerprinting                                      |
 |                     | Display broken, need to connect mouse and HDMI screen.      |
+
+#### Thermal Zones
+*  0, bms (Battery Management System)
+*  1, battery
+*  2, tsense_tz_sensor0
+*  3, tsense_tz_sensor1
+*  4, tsense_tz_sensor2, pop_mem
+*  5, tsense_tz_sensor3
+*  6, tsense_tz_sensor4
+*  7, tsense_tz_sensor5
+*  8, tsense_tz_sensor6, cpu7
+*  9, tsense_tz_sensor7, cpu0
+* 10, tsense_tz_sensor8, cpu1
+* 11, tsense_tz_sensor9, cpu2
+* 12, tsense_tz_sensor10, cpu3
+* 13, tsense_tz_sensor11
+* 14, tsense_tz_sensor12, gpu
+* 15, tsense_tz_sensor13, cpu4
+* 16, tsense_tz_sensor14, cpu5
+* 17, tsense_tz_sensor15, cpu6
+* 18, pm8994_tz (Power Management Chip)
+* 19, msm_therm (Mobile Station Modem)
+* 20, emmc_therm
+* 21, pa_therm0
+* 22, pa_therm1
+* 23, quiet_therm
+* 24, LLM_IA57
+* 25, THRM_57-0
+* 26, THRM_57-1
+* 27, THRM_57-2
+* 28, THRM_57-3
+* 29, THRM_53-0
+* 30, THRM_53-1
+* 31, THRM_53-2
+* 32, THRM_53-3
+
 
 ### Pippin
 

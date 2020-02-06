@@ -1,0 +1,42 @@
+Template for components
+
+### NAME
+
+- __Name__ →
+- __Namespace__ →
+- __Class__ →
+- __Component type__  →
+
+###### Template
+
+| Parameter  | Description |
+|:-----------|:----------- |
+
+###### Options
+
+| Option | Type | Default | Description |
+|:------ |:---- |:------- |:----------- |
+
+Template for metering modules
+
+### NAME
+
+- __Name__ →
+- __Namespace__ →
+- __Class__ →
+- __Return type__  →
+
+###### Header
+
+| Module | Variable | Dimension | Unit |
+|:--- |:--- |:--- |:--- |
+
+###### Options
+
+| Option | Type | Default | Description |
+|:------ |:---- |:------- |:----------- |
+
+###### Static Options
+
+| Option | Default | Description |
+|:------ |:------- |:----------- |
