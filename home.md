@@ -71,6 +71,9 @@ This section provides how-toʼs, examples, demos, etc. to make it easier to get 
 - [Dockerised build environment](4.-How-to/Dockerised-build-environment)
 - [Code style and formatting](4.-How-to/Code-style-and-formatting)
 
+
+#### FAQ <- TODO
+
 ---
 
 > A list of available experimental platforms @ TEC is available [here](0.-General/platforms).
