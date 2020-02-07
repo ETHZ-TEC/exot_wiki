@@ -76,8 +76,6 @@ This section provides how-toʼs, examples, demos, etc. to make it easier to get 
 
 ---
 
-> A list of available experimental platforms @ TEC is available [here](0.-General/platforms).
-
 ------
 [^1]: Bartolini, D.B., Miedl, P. and Thiele, L., 2016, April. On the capacity of thermal covert channels in multicores. In Proceedings of the Eleventh European Conference on Computer Systems (p. 24). ACM.
 [^2]: Miedl, P. and Thiele, L., 2018, April. The security risks of power measurements in multicores. In Proceedings of the 33rd Annual ACM Symposium on Applied Computing (pp. 1585-1592). ACM.
