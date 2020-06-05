@@ -3,6 +3,26 @@
 Welcome to the __Experiment Orchestration Toolkit__, short __ExOT__, knowledge base.
 __ExOT__ was build to orchestrate experiments for the evaluation of covert channels in multicore systems (e.g. Thermal Covert Channel[^1], Power Covert Channel[^2], Frequency Covert Channel[^3]). The Toolkit has been [described in a recent paper](https://doi.org/10.3929/ethz-b-000377986) which will appear in the proceedings of “Design, Automation & Test in Europe Conference & Exhibition (DATE 2020), Grenoble, France, March 9-13, 2020”.
 
+### Get started
+In order to enjoy all features of ExOT, please follow the steps bellow to get a basic setup:
+
+Make sure you have the following software installed:
+1. python 3.7
+1. poetry
+1. Android Studio
+
+Create an ExOT directory and clone all the ExOT repositories into this directory and initialise the submodules, using following script:
+```bash
+for repo in eengine app_unx app_apk compilation; do
+  git clone https://gitlab.ethz.ch/tec/public/exot/${repo}.git
+  cd ${repo}
+  git checkout v1.1.0
+  git submodule --init --recursive update
+  cd ..
+done
+```
+Setup the docker environment, using the instructions in the [README](https://gitlab.ethz.ch/tec/public/exot/compilation/blob/develop/README.md), to be able to compile deployment applications.
+
 ---
 
 ### Covert channel evaluation methodology
@@ -73,8 +93,6 @@ This section provides how-toʼs, examples, demos, etc. to make it easier to get 
 
 
 #### FAQ <- TODO
-
----
 
 ------
 [^1]: Bartolini, D.B., Miedl, P. and Thiele, L., 2016, April. On the capacity of thermal covert channels in multicores. In Proceedings of the Eleventh European Conference on Computer Systems (p. 24). ACM.
