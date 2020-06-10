@@ -1,4 +1,5 @@
-# Experiment Orchestration Toolkit
+# Experiment Orchestration Toolkit 
+<img src="./uploads/figures/exot_logo.png" alt="ExOT Logo" width="100"/>
 
 Welcome to the __Experiment Orchestration Toolkit__ (__ExOT__) knowledge base.
 __ExOT__ was build to orchestrate experiments for the evaluation of data leaks in multicore systems (e.g. 
@@ -6,8 +7,10 @@ __ExOT__ was build to orchestrate experiments for the evaluation of data leaks i
 [Power Covert Channel](https://doi.org/10.1145/3167132.3167301), 
 [Frequency Covert Channel](https://doi.org/10.1109/TCAD.2018.2857038),
 [Thermal Side Channel](#)). 
-__ExOT__ was first presented in detail in a [conference paper](https://doi.org/10.3929/ethz-b-000377986) which appeared in the proceedings of “Design, Automation & Test in Europe Conference & Exhibition (DATE 2020), Grenoble, France, March 9-13, 2020”.
-Furthermore, there is a [white paper]() available, that gives further insight into the underlying design principals of __ExOT__ and a [doctoral thesis]() which uses ExOT for all of its experiments.
+ExOT was first presented in detail in a [conference paper](https://doi.org/10.3929/ethz-b-000377986) which appeared in the proceedings of “Design, Automation & Test in Europe Conference & Exhibition (DATE 2020), Grenoble, France, March 9-13, 2020”.
+The [ExOT white paper](http://pub.tik.ee.ethz.ch/people/miedlp/2020-05-22_ExOT_Whitepaper.pdf) gives further insight into the underlying design principals of ExOT.
+
+
 
 ### Get started
 In order to take advantage of all features of ExOT, please follow the steps bellow to get a basic setup:
