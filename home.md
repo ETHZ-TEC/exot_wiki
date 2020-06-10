@@ -32,60 +32,60 @@ Setup the docker environment, using the instructions in the [README](https://git
 <td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_lib">The C++ application library</a>
  <ul>
-  <li><a href="1.-The-Application-Library/Framework-overview">Overview, structure & terminology</a></li>
-  <li><a href="1.-The-Application-Library/Using-the-library">Using the library in your project</a></li>
-  <li><a href="1.-The-Application-Library/Contributing-to-the-library">Contributing to the library</a></li>
-  <li><a href="1.-The-Application-Library/The-core-framework">The core framework design</a></li>
-  <li><a href="1.-The-Application-Library/Provided-components">Provided components</a></li>
-  <li><a href="1.-The-Application-Library/Available-metering-modules">Available metering modules</a></li>
-  <li><a href="1.-The-Application-Library/Platform-specific-primitives">Platform specific primitives</a></li>
-  <li><a href="1.-The-Application-Library/Utilities">Utilities</a></li>
+  <li><a href="app_lib/overview">Overview, structure & terminology</a></li>
+  <li><a href="app_lib/library-usage">Using the library in your project</a></li>
+  <li><a href="app_lib/contributing">Contributing to the library</a></li>
+  <li><a href="app_lib/core-framework">The core framework design</a></li>
+  <li><a href="app_lib/components">Provided components</a></li>
+  <li><a href="app_lib/metering-modules">Available metering modules</a></li>
+  <li><a href="app_lib/platform-specific-primitives">Platform specific primitives</a></li>
+  <li><a href="app_lib/utilities">Utilities</a></li>
  </ul>
 </ul></td>
 <td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/compilation">The docker based compilation suite</a>
  <ul>
-  <li><a href="4.-How-to/Dockerised-build-environment">Docker-based build environment</a></li>
+  <li><a href="compilation/environment">Docker-based build environment</a></li>
  </ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_unx">UNIX applications</a>
  <ul>
-  <li><a href="2.-The-Applications/Application-Index">Unix application index</a></li>
+  <li><a href="app_unx/index">Unix application index</a></li>
  </ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_apk">The Android NDK integration</a>
  <ul>
-  <li><a href="2.-The-Applications/Android-Application-Index)">Android application index</a></li>
-  <li><a href="2.-The-Applications/Android-Intent-Proxy)">Android Intent Proxy</a></li>
+  <li><a href="app_apk/index">Android application index</a></li>
+  <li><a href="app_apk/intent-proxy">Android Intent Proxy</a></li>
  </ul>
 </ul></td>
 </tr>
 <tr><td colspan="2">How to:</h1></td></tr>
 <tr>
 <td><ul>
-  <li><a href="4.-How-to/Creating-metering-modules">Creating metering modules</a></li>
-  <li><a href="4.-How-to/Creating-process-network-components">Creating process network components</a></li>
+  <li><a href="how-tos/creating-metering-modules">Creating metering modules</a></li>
+  <li><a href="how-tos/creating-process-network-components">Creating process network components</a></li>
 </ul></td>
 <td><ul>
-  <li><a href="4.-How-to/Assembling-metering-modules">Assembling metering modules</a></li>
-  <li><a href="4.-How-to/Building-applications">Building applications</a></li>
+  <li><a href="how-tos/assembling-metering-modules">Assembling metering modules</a></li>
+  <li><a href="how-tos/building-applications">Building applications</a></li>
 </ul></td>
 </tr>
 <!-- ###############################    Experiment Engine    ############################### -->
 <tr><td colspan="2", align="center"><h1 id="eengine"><a href="https://gitlab.ethz.ch/tec/research/exot/eengine">The experiment engine</a></h1></td></tr>
 <td><ul>
- <li><a href="3.-The-Data-Processing-Framework/The-Ecosystem">The ecosystem</a></li>
- <li><a href="3.-The-Data-Processing-Framework/Information-flow">Information flow</a></li>
- <li><a href="3.-The-Data-Processing-Framework/Experiment-structure">Experiment structure</a></li>
+ <li><a href="eengine/overview">The ecosystem</a></li>
+ <li><a href="eengine/information-flow">Information flow</a></li>
+ <li><a href="eengine/experiment-structure">Experiment structure</a></li>
 </ul></td>
 <td><ul>
- <li><a href="3.-The-Data-Processing-Framework/Experiment-drivers">Experiment drivers</a></li>
- <li><a href="3.-The-Data-Processing-Framework/Support-library">Support library & utilities</a></li>
+ <li><a href="eengine/experiment-drivers">Experiment drivers</a></li>
+ <li><a href="eengine/utilities">Utilities</a></li>
 </ul></td>
 </tr>
 <!-- ###############################    General     ############################### -->
 <tr><td colspan="2", align="center"><h1 id="theory">General</h1></td></tr>
 <tr>
 <td><ul>
- <li><a href="4.-How-to/Code-style-and-formatting">Code style and formatting</a></li>
+ <li><a href="general/code-style">Code style and formatting</a></li>
 </ul></td>
 <td><ul>
  <li><a href="https://www.exot.ethz.ch">ExOT public website</a></li>
