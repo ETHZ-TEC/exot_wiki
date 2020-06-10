@@ -25,19 +25,11 @@ done
 
 Setup the docker environment, using the instructions in the [README](https://gitlab.ethz.ch/tec/public/exot/compilation/blob/develop/README.md), to be able to compile deployment applications.
 
-<table>
-<tr><td colspan="2"><h1 id="theory">General</h1></td></tr>
-<tr>
-<td><ul>
- <li><a href="4.-How-to/Code-style-and-formatting">Code style and formatting</a></li>
-</ul></td>
-<td><ul>
- <li><a href="https://www.exot.ethz.ch">ExOT public website</a></li>
-</ul></td>
+<table style="border:1px solid black;margin-left:auto;margin-right:auto;width:100%;float:center">
 <!-- ############################### Application development ############################### -->
-<tr><td colspan="2"><h1 id="applications">Developing deployment applications for ExOT</h1></td></tr>
+<tr><td colspan="2" align="center"><h1 id="applications">Developing deployment applications for ExOT</h1></td></tr>
 <tr>
-<td><ul>
+<td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_lib">The C++ application library</a>
  <ul>
   <li><a href="1.-The-Application-Library/Framework-overview">Overview, structure & terminology</a></li>
@@ -48,11 +40,9 @@ Setup the docker environment, using the instructions in the [README](https://git
   <li><a href="1.-The-Application-Library/Available-metering-modules">Available metering modules</a></li>
   <li><a href="1.-The-Application-Library/Platform-specific-primitives">Platform specific primitives</a></li>
   <li><a href="1.-The-Application-Library/Utilities">Utilities</a></li>
-  <li><a href="4.-How-to/Creating-metering-modules">How to: Creating metering modules</a></li>
-  <li><a href="4.-How-to/Creating-process-network-components">How to: Creating process network components</a></li>
-  <li><a href="4.-How-to/Assembling-metering-modules">How to: Assembling metering modules</a></li>
-  <li><a href="4.-How-to/Building-applications">How to: Building applications</a></li>
  </ul>
+</ul></td>
+<td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/compilation">The docker based compilation suite</a>
  <ul>
   <li><a href="4.-How-to/Dockerised-build-environment">Docker-based build environment</a></li>
@@ -67,18 +57,40 @@ Setup the docker environment, using the instructions in the [README](https://git
   <li><a href="2.-The-Applications/Android-Intent-Proxy)">Android Intent Proxy</a></li>
  </ul>
 </ul></td>
-<!-- ###############################    Experiment Engine    ############################### -->
+</tr>
+<tr><td colspan="2">How to:</h1></td></tr>
+<tr>
 <td><ul>
- <li><a href="https://gitlab.ethz.ch/tec/research/exot/eengine">The experiment engine</a>
-  <ul>
-   <li><a href="3.-The-Data-Processing-Framework/The-Ecosystem">The ecosystem</a></li>
-   <li><a href="3.-The-Data-Processing-Framework/Information-flow">Information flow</a></li>
-   <li><a href="3.-The-Data-Processing-Framework/Experiment-structure">Experiment structure</a></li>
-   <li><a href="3.-The-Data-Processing-Framework/Experiment-drivers">Experiment drivers</a></li>
-   <li><a href="3.-The-Data-Processing-Framework/Support-library">Support library & utilities</a></li>
-  </ul>
- </li>
+  <li><a href="4.-How-to/Creating-metering-modules">Creating metering modules</a></li>
+  <li><a href="4.-How-to/Creating-process-network-components">Creating process network components</a></li>
+</ul></td>
+<td><ul>
+  <li><a href="4.-How-to/Assembling-metering-modules">Assembling metering modules</a></li>
+  <li><a href="4.-How-to/Building-applications">Building applications</a></li>
+</ul></td>
+</tr>
+<!-- ###############################    Experiment Engine    ############################### -->
+<tr><td colspan="2", align="center"><h1 id="eengine"><a href="https://gitlab.ethz.ch/tec/research/exot/eengine">The experiment engine</a></h1></td></tr>
+<td><ul>
+ <li><a href="3.-The-Data-Processing-Framework/The-Ecosystem">The ecosystem</a></li>
+ <li><a href="3.-The-Data-Processing-Framework/Information-flow">Information flow</a></li>
+ <li><a href="3.-The-Data-Processing-Framework/Experiment-structure">Experiment structure</a></li>
+</ul></td>
+<td><ul>
+ <li><a href="3.-The-Data-Processing-Framework/Experiment-drivers">Experiment drivers</a></li>
+ <li><a href="3.-The-Data-Processing-Framework/Support-library">Support library & utilities</a></li>
+</ul></td>
+</tr>
+<!-- ###############################    General     ############################### -->
+<tr><td colspan="2", align="center"><h1 id="theory">General</h1></td></tr>
+<tr>
+<td><ul>
+ <li><a href="4.-How-to/Code-style-and-formatting">Code style and formatting</a></li>
+</ul></td>
+<td><ul>
+ <li><a href="https://www.exot.ethz.ch">ExOT public website</a></li>
 </ul></td>
 </tr>
 </table>
+
 
