@@ -32,6 +32,7 @@ Setup the docker environment, using the instructions in the [README](https://git
 <td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_lib">The C++ application library</a>
  <ul>
+  <li><a href="app_lib/general">General information</a></li>
   <li><a href="app_lib/overview">Overview, structure & terminology</a></li>
   <li><a href="app_lib/library-usage">Using the library in your project</a></li>
   <li><a href="app_lib/contributing">Contributing to the library</a></li>
@@ -50,10 +51,12 @@ Setup the docker environment, using the instructions in the [README](https://git
  </ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_unx">UNIX applications</a>
  <ul>
+  <li><a href="app_unx/general">General information</a></li>
   <li><a href="app_unx/index">Unix application index</a></li>
  </ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_apk">The Android NDK integration</a>
  <ul>
+  <li><a href="app_apk/general">General information</a></li>
   <li><a href="app_apk/index">Android application index</a></li>
   <li><a href="app_apk/intent-proxy">Android Intent Proxy</a></li>
  </ul>
