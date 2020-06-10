@@ -23,8 +23,6 @@ for repo in eengine app_unx app_apk compilation; do
 done
 ```
 
-Setup the docker environment, using the instructions in the [README](https://gitlab.ethz.ch/tec/public/exot/compilation/blob/develop/README.md), to be able to compile deployment applications.
-
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;width:100%;float:center">
 <!-- ############################### Application development ############################### -->
 <tr><td colspan="2" align="center"><h1 id="applications">Developing deployment applications for ExOT</h1></td></tr>
