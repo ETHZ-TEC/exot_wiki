@@ -1,17 +1,23 @@
 # Experiment Orchestration Toolkit
 
-Welcome to the __Experiment Orchestration Toolkit__, short __ExOT__, knowledge base.
-__ExOT__ was build to orchestrate experiments for the evaluation of covert channels in multicore systems (e.g. Thermal Covert Channel[^1], Power Covert Channel[^2], Frequency Covert Channel[^3]). The Toolkit has been [described in a recent paper](https://doi.org/10.3929/ethz-b-000377986) which will appear in the proceedings of “Design, Automation & Test in Europe Conference & Exhibition (DATE 2020), Grenoble, France, March 9-13, 2020”.
+Welcome to the __Experiment Orchestration Toolkit__ (__ExOT__) knowledge base.
+__ExOT__ was build to orchestrate experiments for the evaluation of data leaks in multicore systems (e.g. 
+[Thermal Covert Channel](http://doi.acm.org/10.1145/2901318.2901322), 
+[Power Covert Channel](https://doi.org/10.1145/3167132.3167301), 
+[Frequency Covert Channel](https://doi.org/10.1109/TCAD.2018.2857038),
+[Thermal Side Channel](#)). 
+__ExOT__ was first presented in detail in a [conference paper](https://doi.org/10.3929/ethz-b-000377986) which appeared in the proceedings of “Design, Automation & Test in Europe Conference & Exhibition (DATE 2020), Grenoble, France, March 9-13, 2020”.
+Furthermore, there is a [white paper]() available, that gives further insight into the underlying design principals of __ExOT__ and a [doctoral thesis]() which uses ExOT for all of its experiments.
 
 ### Get started
 In order to take advantage of all features of ExOT, please follow the steps bellow to get a basic setup:
 
 Make sure you have the following software installed:
-1. python 3.7 # TODO LINK
-1. poetry # TODO LINK 
-1. Android Studio # TODO LINK
+1. [python 3.7](https://www.python.org/)
+1. [poetry](https://python-poetry.org/)
+1. [Android Studio](https://developer.android.com/studio/index.html)
 
-Create an ExOT directory and clone all the ExOT repositories into this directory and initialise the submodules, using following script:
+Next, create an ExOT directory and clone all the ExOT repositories into this directory and initialise the submodules, using following script:
 
 ```bash
 for repo in eengine app_unx app_apk compilation; do
@@ -22,6 +28,9 @@ for repo in eengine app_unx app_apk compilation; do
   cd ..
 done
 ```
+
+Now you have successfully installed the basic setup of ExOT.
+Please refer to the table below for advanced information regarding the different components of ExOT.
 
 <table style="border:1px solid black;margin-left:auto;margin-right:auto;width:100%;float:center">
 <!-- ############################### Application development ############################### -->
@@ -94,5 +103,4 @@ done
 </ul></td>
 </tr>
 </table>
-
 
