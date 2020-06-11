@@ -13,7 +13,7 @@ Firsly, the used header files have to be included. These will primarily consist 
 
 - The header file combining all core framework's headers.
   ```c++
-  #include <covert/framework/all.h>
+  #include <exot/framework/all.h>
   ```
 - Header files for command-line parsing and logging support.
   ```c++
