@@ -42,7 +42,6 @@ Please refer to the table below for advanced information regarding the different
 <td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_lib">The C++ application library</a>
  <ul>
-  <li><a href="app_lib/general">General information</a></li>
   <li><a href="app_lib/overview">Overview, structure & terminology</a></li>
   <li><a href="app_lib/library-usage">Using the library in your project</a></li>
   <li><a href="app_lib/contributing">Contributing to the library</a></li>
