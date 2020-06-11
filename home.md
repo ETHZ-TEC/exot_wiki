@@ -55,7 +55,6 @@ Please refer to the table below for advanced information regarding the different
 <td width=50%><ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/compilation">The docker based compilation suite</a>
  <ul>
-  <li><a href="compilation/setup">Setting up the compilation suite</a></li>
   <li><a href="compilation/environment">The build environment</a></li>
  </ul>
  <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_unx">UNIX applications</a>
