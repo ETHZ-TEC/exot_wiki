@@ -37,7 +37,7 @@ Please refer to the table below for advanced information regarding the different
 <tr><td colspan="2" align="center"><h1 id="applications">Developing deployment applications for ExOT</h1></td></tr>
 <tr>
 <td width=50%><ul>
- <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_lib">The C++ application library</a>
+ <li><a href="https://gitlab.ethz.ch/tec/public/exot/app_lib">The C++ application library</a>
  <ul>
   <li><a href="app_lib/general">General information</a></li>
   <li><a href="app_lib/overview">Overview, structure & terminology</a></li>
@@ -51,17 +51,17 @@ Please refer to the table below for advanced information regarding the different
  </ul>
 </ul></td>
 <td width=50%><ul>
- <li><a href="https://gitlab.ethz.ch/tec/research/exot/compilation">The docker based compilation suite</a>
+ <li><a href="https://gitlab.ethz.ch/tec/public/exot/compilation">The docker based compilation suite</a>
  <ul>
   <li><a href="compilation/setup">Setting up the compilation suite</a></li>
   <li><a href="compilation/environment">The build environment</a></li>
  </ul>
- <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_unx">UNIX applications</a>
+ <li><a href="https://gitlab.ethz.ch/tec/public/exot/app_unx">UNIX applications</a>
  <ul>
   <li><a href="app_unx/general">General information</a></li>
   <li><a href="app_unx/index">Unix application index</a></li>
  </ul>
- <li><a href="https://gitlab.ethz.ch/tec/research/exot/app_apk">The Android NDK integration</a>
+ <li><a href="https://gitlab.ethz.ch/tec/public/exot/app_apk">The Android NDK integration</a>
  <ul>
   <li><a href="app_apk/general">General information</a></li>
   <li><a href="app_apk/index">Android application index</a></li>
@@ -72,16 +72,16 @@ Please refer to the table below for advanced information regarding the different
 <tr><td colspan="2">How to:</h1></td></tr>
 <tr>
 <td><ul>
-  <li><a href="how-tos/creating-metering-modules">Creating metering modules</a></li>
-  <li><a href="how-tos/creating-process-network-components">Creating process network components</a></li>
+  <li><a href="how_tos/creating-metering-modules">Creating metering modules</a></li>
+  <li><a href="how_tos/creating-process-network-components">Creating process network components</a></li>
 </ul></td>
 <td><ul>
-  <li><a href="how-tos/assembling-metering-modules">Assembling metering modules</a></li>
-  <li><a href="how-tos/building-applications">Building applications</a></li>
+  <li><a href="how_tos/assembling-metering-modules">Assembling metering modules</a></li>
+  <li><a href="how_tos/building-applications">Building applications</a></li>
 </ul></td>
 </tr>
 <!-- ###############################    Experiment Engine    ############################### -->
-<tr><td colspan="2", align="center"><h1 id="eengine"><a href="https://gitlab.ethz.ch/tec/research/exot/eengine">The experiment engine</a></h1></td></tr>
+<tr><td colspan="2", align="center"><h1 id="eengine"><a href="https://gitlab.ethz.ch/tec/public/exot/eengine">The experiment engine</a></h1></td></tr>
 <td><ul>
  <li><a href="eengine/overview">The ecosystem</a></li>
  <li><a href="eengine/information-flow">Information flow</a></li>
