@@ -8,7 +8,7 @@ The ideal way of working on the library is to follow the [git-flow](https://gith
 
 The basic principles are:
 
-- **Avoid direct commits on _master_**. The master branch is (or may be) protected from direct writes by some project members.
+- **No commits on _master_**. The master branch is protected from direct writes by project members. Only stable version will be merged into master for publication.
 - **Use the _master_ branch for stable versions**. Pull to the _master_ branch only tested and stable features from the development brach.
 - **Keep main development on the _develop_ branch**. The _develop_ branch contains the current work-in-progress. At the same time, avoid introducing large changes to the _develop_ branch.
 - **Use the issue tracker and milestones**. Create new issues for features, fixes, to-do's, and errors. Use the available labels, or add new if necessary.
@@ -17,4 +17,4 @@ The basic principles are:
 - **Tag working code using a proper versioning system**. The version number should be kept in sync with the project version in *CMakeLists.txt*. Creating tagged versions will help importing and using the library in other pieces of software.
 - **Use issue and milestone numbers, commit hashes, and other advanced GitLab-flavoured Markdown features**. These facilitate keeping track of the changes and progress.
 
-Also, please refer to the how-to page ["Code Style and Formatting"](../4.-How-to/Code-style-and-formatting#C++-applications-and-the-application-library), which shows you how to automatically format the code with *clang-format* to conform to our coding style.
+Also, please refer to the ["Code Style and Formatting"](../general/code-style#c-applications-and-the-application-library) page, which shows you how to automatically format the code with *clang-format* to conform to our coding style.
