@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 # Provided components
 
 1. [Logging](#Logging)
@@ -71,7 +74,7 @@ using reader_t =
 |:-----------|:----------- |
 | `Token`    | The type of the token to ingest, e.g. `tuple<chrono::nanoseconds, int, int>`
 
-> The token type must have an input stream operator `<<`. Variable-length tokens are also supported. [The library provides a custom overloads for a few types.](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/utilities/istream.h)
+> The token type must have an input stream operator `<<`. Variable-length tokens are also supported. [The library provides a custom overloads for a few types.](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/utilities/istream.h)
 
 ###### Options
 
@@ -113,8 +116,8 @@ using meter_t = components::meter_host_logger<
 |:------ |:---- |:------- |:----------- |
 | `period` | *Duration* | 10 ms | The sampling period
 | `cpu_to_pin` | *unsigned* | 0 | The CPU to pin the host process to
-| `priority` | *unsigned* | 90 | The [scheduling priority](./Utilities/Multi-threading.md), [0,99]
-| `policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./Utilities/Multi-threading.md)
+| `priority` | *unsigned* | 90 | The [scheduling policy](./utilities#multi-threading), [0,99]
+| `policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./utilities#multi-threading)
 | `log_header` | *bool* | true | Should log CSV header?
 | `start_immediately` | *bool* | false | Should start immediately, or wait for signal? |
 | `use_busy_sleep` | *bool* | false | Should wait for signal in a busy sleep loop?
@@ -123,7 +126,7 @@ using meter_t = components::meter_host_logger<
 
 ###### Static options
 
-The static options below can be turned on with a preprocessor definition before the inclusion of the header file, or during the CMake configuration. For descriptions see the page [Using the library](./Using-the-library#Configuration). The `#define`s are `METER_USE_STATISTICS`, `METER_SET_AFFINITY`, `METER_LOG_SYSTEM_TIME`, `METER_NOW_FROM_TIMER`.
+The static options below can be turned on with a preprocessor definition before the inclusion of the header file, or during the CMake configuration. For descriptions see the [dedicated page](./library-usage#configuration). The `#define`s are `METER_USE_STATISTICS`, `METER_SET_AFFINITY`, `METER_LOG_SYSTEM_TIME`, `METER_NOW_FROM_TIMER`.
 
 ```c++
 struct MeterOptions {
@@ -143,11 +146,11 @@ struct MeterOptions {
 
 The generator host encapsulates common functionality, which allows generators to be much more compact and reduces code duplication. It is responsible for creating worker threads, timers, and keeping track of the schedule, dictated by the tokens it receives.
 
-For available generators, see the page ["Available generator modules"](./Available-generator-modules).
+For available generators, see the [dedicated page](./generator-modules).
 
 Each worker thread receives its assigned core, the core's index in the cores set, and a decomposed subtoken (token without duration). Then each worker uses these pieces of information to generate some load (or sleep).
 
-The workers use the functions provided by the generator module, and are described by the following lambda ([exot/components/generator_host.h#L209](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/components/generator_host.h#L209)):
+The workers use the functions provided by the generator module, and are described by the following lambda:
 
 ```c++
 [this, core, index] {
@@ -181,17 +184,17 @@ using loadgen_t =
 |:------ |:---- |:------- |:----------- |
 | `cores` | `set<int>` | null | The CPU cores allocated for workers
 | `cpu_to_pin` | *unsigned* | Max - 1 | The CPU to pin the host process to
-| `worker_policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./Utilities/Multi-threading.md) of workers
-| `self_policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./Utilities/Multi-threading.md) of the host
-| `worker_priority` | *unsigned* | 90 | The [scheduling priority](./Utilities/Multi-threading.md), [0,99] of the workers
-| `self_priority` | *unsigned* | 99 | The [scheduling priority](./Utilities/Multi-threading.md), [0,99] of the host
+| `worker_policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./utilities#multi-threading) of workers
+| `self_policy` | *string* (`policy_type`) | "Other" | The [scheduling policy](./utilities#multi-threading) of the host
+| `worker_priority` | *unsigned* | 90 | The [scheduling policy](./utilities#multi-threading), [0,99] of the workers
+| `self_priority` | *unsigned* | 99 | The [scheduling policy](./utilities#multi-threading), [0,99] of the host
 | `use_busy_sleep` | *bool* | false | Should wait for signal in a busy sleep loop?
 | `busy_sleep_yield` | *bool* | false | Should yield thread in the busy sleep loop?
 | `start_check_period` | *unsigned* | 1 | Busy sleep check period, in µs.
 
 ###### Static options
 
-The static options can be turned on with a preprocessor definition before the inclusion of the header file, or during the CMake configuration. For descriptions see the page [Using the library](./Using-the-library#Configuration). The `#define`s are `GENERATOR_HOST_PERFORM_VALIDATION`, `GENERATOR_HOST_PROVIDE_TIMING_STATISTICS`.
+The static options can be turned on with a preprocessor definition before the inclusion of the header file, or during the CMake configuration. For descriptions see the [dedicated page](./library-usage#configuration). The `#define`s are `GENERATOR_HOST_PERFORM_VALIDATION`, `GENERATOR_HOST_PROVIDE_TIMING_STATISTICS`.
 
 ## Other
 
