@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 # Contributing to the library
 
 The ideal way of working on the library is to follow the [git-flow](https://github.com/nvie/gitflow) workflow, or preferably its simpler alternatives. Gitlab, used for our repository hosting, facilitates such workflows thanks to its issue tracking feature. For further information please refer to:
