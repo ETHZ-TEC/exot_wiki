@@ -3,11 +3,11 @@
 
 # Provided components
 
-1. [Logging](#Logging)
-1. [Schedule reader](#Schedule-reader)
-1. [Meter host w/ logger](#Meter-host-with-a-logger)
-1. [Generator host](#Generator-host)
-1. [Other](#Other)
+1. [Logging](#logging)
+1. [Schedule reader](#schedule-reader)
+1. [Meter host w/ logger](#meter-host-with-a-logger)
+1. [Generator host](#generator-host)
+1. [Other](#other)
 
 ### Logging
 
