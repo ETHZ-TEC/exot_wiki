@@ -1,4 +1,9 @@
-The library provides a generic way of combining multiple individual metering modules together. As long as the modules conform to the requirements listed in ["Creating metering modules"](2.-How-to's/Creating-metering-modules), they can be incorporated into larger components.
+[:back:](/home)
+---
+
+# Assembling metering modules
+
+The library provides a generic way of combining multiple individual metering modules together. As long as the modules conform to the requirements listed in ["Creating metering modules"](how_tos/creating-metering-modules), they can be incorporated into larger components.
 
 ### Principles
 
@@ -21,11 +26,11 @@ using meter_token_type = std::tuple<Duration, typename Meters::return_type...>;
 
 The "combining" of meter modules takes place in several locations:
 
-1. The meter host's *settings* structure has inherits from all modules' settings ([link to source](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/components/meter_host_logger.h#L84)).
+1. The meter host's *settings* structure has inherits from all modules' settings ([link to source](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/components/meter_host_logger.h#L102)).
   ```c++
   struct settings : Meters::settings ... { /* meter's own settings */ }
   ```
-2. The modules' *configure* functions are added to a top-level configuration using a fold expression ([link](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/components/meter_host_logger.h#L157)). The individual modules' *configure* functions are supplied with the meter host's *settings* structure; however, they only access their relevant parts, since they access it through their private base references. Therefore there are no name clashes between modules.
+2. The modules' *configure* functions are added to a top-level configuration using a fold expression ([link](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/components/meter_host_logger.h#L177)). The individual modules' *configure* functions are supplied with the meter host's *settings* structure; however, they only access their relevant parts, since they access it through their private base references. Therefore there are no name clashes between modules.
   ```c++
   (..., total.push_back(std::move(Meters::configure(conf))));
   ```
