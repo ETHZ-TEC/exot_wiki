@@ -1,12 +1,15 @@
+[:back:](/home)
+---
+
 # Code style
 
 The project uses code formatting tools to make the code style consistent and readable. It's recommended that the following tools are used in the Python-based *Data Processing* repository and the C++ based repositories.
 
 ## Data processing
 
-Formatting Python source code is done with the help of two tools: [Black](https://black.readthedocs.io/en/stable/index.html) and [isort](https://pypi.org/project/isort/). These dependencies are defined in the Poetry's *[pyproject.toml](https://gitlab.ethz.ch/tec/research/exot/datapro/blob/develop/pyproject.toml)* file at the root of the repository. To have them available in the Python environment, make sure to pass the option `--dev` to install development dependencies when bootstrapping with `poetry install`.
+Formatting Python source code is done with the help of two tools: [Black](https://black.readthedocs.io/en/stable/index.html) and [isort](https://pypi.org/project/isort/). These dependencies are defined in the Poetry's *[pyproject.toml](https://gitlab.ethz.ch/tec/public/exot/eengine/blob/master/pyproject.toml)* file at the root of the repository. To have them available in the Python environment, make sure to pass the option `--dev` to install development dependencies when bootstrapping with `poetry install`.
 
-The first tool, [Black](https://black.readthedocs.io/en/stable/index.html), enforces a consistent source code formatting style and relieves the user of manual effort. The settings for the formatter are defined in the *[pyproject.toml](https://gitlab.ethz.ch/tec/research/exot/datapro/blob/develop/pyproject.toml)* file:
+The first tool, [Black](https://black.readthedocs.io/en/stable/index.html), enforces a consistent source code formatting style and relieves the user of manual effort. The settings for the formatter are defined in the *[pyproject.toml](https://gitlab.ethz.ch/tec/public/exot/eengine/blob/master/pyproject.toml)* file:
 
 ```toml
 [tool.black]
@@ -21,7 +24,7 @@ To format a file or a directory (recursively) use the following command:
 poetry run black --config ./pyproject.toml <file/directory>
 ```
 
-The second tool, [isort](https://pypi.org/project/isort/), makes sure that the imports are sorted and deduplicated in all Python source files. All imports are sorted alphabetically and grouped into three categories: 1) Python's standard library; 2) third-party libraries; 3) local imports. The sorting and formatting settings are defined in the *[setup.cfg](https://gitlab.ethz.ch/tec/research/exot/datapro/blob/develop/setup.cfg)* file at the root of the repository.
+The second tool, [isort](https://pypi.org/project/isort/), makes sure that the imports are sorted and deduplicated in all Python source files. All imports are sorted alphabetically and grouped into three categories: 1) Python's standard library; 2) third-party libraries; 3) local imports. The sorting and formatting settings are defined in the *[setup.cfg](https://gitlab.ethz.ch/tec/public/exot/eengine/blob/master/setup.cfg)* file at the root of the repository.
 
 ```toml
 [isort]
@@ -40,7 +43,7 @@ poetry run isort -sp ./setup.cfg -y
 
 ## C++ applications and the application library
 
-The C++ source code files should be processed with the [clang-format](https://clang.llvm.org/docs/ClangFormat.html) utility. The formatter is based on LLVM and excels at producing consistent and nicely formatter source code. Its settings are defined in the *[.clang-format](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/.clang-format)* file at the root of the Application Library repository.
+The C++ source code files should be processed with the [clang-format](https://clang.llvm.org/docs/ClangFormat.html) utility. The formatter is based on LLVM and excels at producing consistent and nicely formatter source code. Its settings are defined in the *[.clang-format](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/.clang-format)* file at the root of the Application Library repository.
 
 ```
 ---
