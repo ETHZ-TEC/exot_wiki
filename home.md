@@ -45,7 +45,6 @@ Please refer to the table below for advanced information regarding the different
   <li><a href="app_lib/overview">Overview, structure & terminology</a></li>
   <li><a href="app_lib/library-usage">Using the library in your project</a></li>
   <li><a href="app_lib/contributing">Contributing to the library</a></li>
-  <li><a href="app_lib/build-apps">Building applications</a></li>
   <li><a href="app_lib/core-framework">The core framework design</a></li>
   <li><a href="app_lib/components">Provided components</a></li>
   <li><a href="app_lib/meter-modules">Available metering modules</a></li>
