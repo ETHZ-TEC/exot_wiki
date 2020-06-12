@@ -87,7 +87,7 @@ Please refer to the table below for advanced information regarding the different
 <td><ul>
  <li><a href="eengine/overview">The ecosystem</a></li>
  <li><a href="eengine/information-flow">Information flow</a></li>
- <li><a href="eengine/experiment-structure">Experiment structure</a></li>
+ <li><a href="eengine/experiment-configuration">Experiment configuration</a></li>
 </ul></td>
 <td><ul>
  <li><a href="eengine/experiment-drivers">Experiment drivers</a></li>
