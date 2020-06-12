@@ -92,7 +92,7 @@ Please refer to the table below for advanced information regarding the different
 <td><ul>
  <li><a href="eengine/experiment-drivers">Experiment drivers</a></li>
  <li><a href="eengine/utilities">Utilities</a></li>
- <li><a href="eengine/utilities">Experiment types</a></li>
+ <li><a href="eengine/experiment-types">Experiment types</a></li>
 </ul></td>
 </tr>
 <!-- ###############################    General     ############################### -->
