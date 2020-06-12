@@ -47,7 +47,8 @@ Please refer to the table below for advanced information regarding the different
   <li><a href="app_lib/contributing">Contributing to the library</a></li>
   <li><a href="app_lib/core-framework">The core framework design</a></li>
   <li><a href="app_lib/components">Provided components</a></li>
-  <li><a href="app_lib/metering-modules">Available metering modules</a></li>
+  <li><a href="app_lib/meter-modules">Available metering modules</a></li>
+  <li><a href="app_lib/generator-modules">Available generator modules</a></li>
   <li><a href="app_lib/platform-specific-primitives">Platform specific primitives</a></li>
   <li><a href="app_lib/utilities">Utilities</a></li>
  </ul>

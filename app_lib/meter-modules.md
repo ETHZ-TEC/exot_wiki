@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 # Available metering modules
 
 This page outlines all the available metering modules.
@@ -10,7 +13,7 @@ This page outlines all the available metering modules.
 
 ---
 
-> As described on the [Utilities/Formatting](./Utilities/Formatting) page, all metering modules produce individual header information with the `exot::utilities::generate_header` function. The 4 components of the individual column header are: __1: module, 2: variable, 3: dimension, 4: unit__.
+> As described on the [utilities formatting](./utilities#formatting) section, all metering modules produce individual header information with the `exot::utilities::generate_header` function. The 4 components of the individual column header are: __1: module, 2: variable, 3: dimension, 4: unit__.
 >
 > For example, consider the following: a module *"some_meter"* produces readings of two variables, *"variable_1"* and *"variable_2*". The first variable is single-dimensional, while the latter has 2 dimensions (e.g. for 2 CPUs). The units are degrees Celsius. The produced header descriptions would be: *some_meter:variable_1:0:℃, some_meter:variable_2:0:℃, some_meter:variable_2:1:℃*.
 >
@@ -20,7 +23,7 @@ This page outlines all the available metering modules.
 
 ## Thermal
 
-The [exot/meters/thermal.h](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/meters/thermal.h) links to two metering modules that measure the temperatures in the system.
+The [exot/meters/thermal.h](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/meters/thermal.h) links to two metering modules that measure the temperatures in the system.
 
 ### Thermal (sysfs)
 

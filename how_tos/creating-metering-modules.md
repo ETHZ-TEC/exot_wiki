@@ -1,4 +1,9 @@
-In the context of the application library, measuring some shared state can be most effectively accomplished with the help of __metering modules__. These encapsulate all the required configuration, setup, and measurement procedures in a way that can be most readibly used with the rest of the library. The biggest advantage of using _metering modules_ is their integration with the _meter host_, a component that can combine individual _meter modules_ into larger measurement applications. ["Assembling metering modules"](2.-How-to's/Assembling-metering-modules) shows how these are integrated in the host component.
+[:back:](/home)
+---
+
+# Creating meter modules
+
+In the context of the application library, measuring some shared state can be most effectively accomplished with the help of __metering modules__. These encapsulate all the required configuration, setup, and measurement procedures in a way that can be most readibly used with the rest of the library. The biggest advantage of using _metering modules_ is their integration with the _meter host_, a component that can combine individual _meter modules_ into larger measurement applications. ["Assembling metering modules"](how_tos/assembling-metering-modules) shows how these are integrated in the host component.
 
 ### Requirements
 

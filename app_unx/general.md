@@ -1,8 +1,11 @@
+[:back:](/home)
+---
+
 ### Unix applications
 
 This repository contains sink and source applications built on top of the [ExOT Application Library](https://gitlab.ethz.ch/tec/public/exot/app_lib), and relevant utilities. Current development versions are available in the `develop` branch.
 
-The [generators](generators) folder contains the source applications, and [meters](meters) contains sink applications. The library is imported as a git submodule at *lib*. The [scripts](scripts) folder contains auxiliary files, most notably the script for [distributing meters as systemd services](scripts/pack-for-distribution.sh).
+The [generators](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/generators) folder contains the source applications, and [meters](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/meters) contains sink applications. The library is imported as a git submodule at *lib*. The [scripts](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/scripts) folder contains auxiliary files, most notably the script for [distributing meters as systemd services](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/scripts/pack-for-distribution.sh).
 
 ### How to add/compile applications
 
@@ -16,11 +19,11 @@ If the repository was cloned without the `--recursive` flag, make sure to import
 
 ~~~sh
 # run beforehand...
-git clone https://gitlab.ethz.ch/tec/public/exot/app_unx.git
+git clone https://gitlab.ethz.ch/tec/research/exot/app_unx.git
 git submodule update --init --recursive
 ~~~
 
-The main build file, [CMakeLists.txt](CMakeLists.txt), considers every single C++ source file as a separate application, and provides a build target for it. For example, a file [utilisation.cpp](meters/utilisation.cpp) will create a `utilisation` make target. Applications can be added manually to the build file, or take advantage of the automatic build target creation.
+The main build file, [CMakeLists.txt](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/CMakeLists.txt), considers every single C++ source file as a separate application, and provides a build target for it. For example, a file [utilisation.cpp](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/meters/meter_utilisation_procfs.cpp) will create a `meter_utilisation_procfs` make target. Applications can be added manually to the build file, or take advantage of the automatic build target creation.
 
 The applications' repository has the same dependencies as the application library, at minimum:
 
@@ -47,8 +50,6 @@ Then, to compile specific targets, choose the build folder and run:
 ```sh
 cmake --build build/{Debug,Release} --target <target name> -- -j 0
 ```
-
-Please consult the [application library](https://gitlab.ethz.ch/tec/public/exot/app_lib) for further options, like adding memory or thread sanitisers to CMake targets.
 
 ---
 

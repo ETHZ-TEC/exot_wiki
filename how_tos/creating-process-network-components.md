@@ -1,3 +1,8 @@
+[:back:](/home)
+---
+
+# Creating process network components
+
 The framework defines three classes of *process network* nodes:
 
 1. **Consumers**: receiver nodes that only have an input interface, from which they *consume* tokens.
@@ -53,7 +58,7 @@ We only need to write:
 class ConcreteConsumer : public IConsumer<int, queue, interface>;
 ```
 
-The framework provides, in [include/framework/all.h](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/framework/all.h), useful template aliases:
+The framework provides, in [include/framework/all.h](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/framework/all.h), useful template aliases:
 
 ```c++
 /** Aliases for nodes using thread-based interfaces. */
@@ -86,7 +91,7 @@ class ConcreteConsumer : public Consumer<int>;
 
 ### Creating process network components
 
-In the framework it is common to configure the components in the [same way as meter modules](2.-How-to's/Creating-meter-modules), i.e. declaring member *settings* classes, and a static *configure* function.
+In the framework it is common to configure the components in the [same way as meter modules](how_tos/creating-meter-modules), i.e. declaring member *settings* classes, and a static *configure* function.
 
 To have a *process network* node usable with the executors, it should inherit from the `IProcess` class, and implement the pure virtual function `void process()`.
 

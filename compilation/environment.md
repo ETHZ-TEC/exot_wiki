@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 ### Dockerised build environment
 This directory contains the sources necessary for building [Docker](https://docs.docker.com) containers, which encapsulate the required tools for building C and C++ based projects. The container is based on the latest Ubuntu LTS, and supports cross-compiling for x86_64, aarch64, and 32-bit arm architectures with soft and hard floating-point implementations.
 
@@ -75,7 +78,7 @@ The following are the steps required on [Ubuntu](https://docs.docker.com/install
 
 Make sure that docker is running before proceeding with installation.
 
-To build the container images, clone the repository and navigate to the folder in which this README is contained, and use `make`. The contained [Makefile](./Makefile) defines the following rules:
+To build the container images, clone the repository and navigate to the folder in which this README is contained, and use `make`. The contained [Makefile](https://gitlab.ethz.ch/tec/public/exot/compilation/-/blob/master/Makefile) defines the following rules:
 
 - __*base*: build the base image__,
 - __*scripted*: build the extended image, depends on *base*__,

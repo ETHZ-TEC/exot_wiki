@@ -1,38 +1,45 @@
-The way in which applications are built with the help of the library is quite straightforward. A number of ready-to-use applications are available in the [Unix applications repository](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_unx).
+[:back:](/home)
+---
 
-The following example shows how to construct a frequency and utilisation metering application. It is based on the [_procfs_ utilisation](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/modules/utilisation_procfs.h), [_sysfs_ frequency](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/modules/frequency_sysfs.h), and [relative frequency](https://gitlab.ethz.ch/tec/research/benchmark_suite/app_lib/blob/master/include/covert/modules/frequency_rel.h) metering modules.
+> Note: This page is partly outdated and needs to be updated!
+
+# Building applications
+
+The way in which applications are built with the help of the library is quite straightforward. A number of ready-to-use applications are available in the [Unix applications repository](https://gitlab.ethz.ch/tec/public/exot/app_unx).
+
+The following example shows how to construct a frequency and utilisation metering application. It is based on the [_procfs_ utilisation](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/meters/utilisation_procfs.h), [_sysfs_ frequency](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/meters/frequency_sysfs.h), and [relative frequency](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/meters/frequency_rel.h) metering modules.
 
 Firsly, the used header files have to be included. These will primarily consist of:
 
 - The header file combining all core framework's headers.
   ```c++
-  #include <covert/framework/all.h>
+  #include <exot/framework/all.h>
   ```
 - Header files for command-line parsing and logging support.
   ```c++
-  #include <covert/utilities/cli.h>
-  #include <covert/utilities/logging.h>
+  #include <exot/utilities/cli.h>
+  #include <exot/utilities/logging.h>
   ```
 - The used components. In the case of a metering application, these will include metering module host and the individual modules.
   ```c++
-  #include <covert/components/meter_host_logger.h>
-  #include <covert/modules/frequency.h>
-  #include <covert/modules/utilisation.h>
+  #include <exot/components/meter_host_logger.h>
+  #include <exot/meters/frequency.h>
+  #include <exot/meters/utilisation.h>
   ```
 
 Inside the *main* function it is useful to create aliases to the used classes, such that the namespaces do not have to be included and changes can be easily applied. In this case we create aliases for the metering modules, and create a type alias for the meter host logger. Please refer to other wiki pages for further information on how to [combine](2.-How-to's/Assembing-metering-modules) and [create](2.-How-to's/Creating-metering-modules) metering modules.
 
 ```c++
 int main(int argc, char** argv) {
-  using covert::modules::frequency_rel;
-  using covert::modules::frequency_sysfs;
-  using covert::modules::utilisation_procfs;
+  using exot::modules::frequency_rel;
+  using exot::modules::frequency_sysfs;
+  using exot::modules::utilisation_procfs;
   using meter_type =
-      covert::components::meter_host_logger<std::chrono::microseconds,
+      exot::components::meter_host_logger<std::chrono::microseconds,
                                             utilisation_procfs, frequency_sysfs,
                                             frequency_rel>;
-  using covert::utilities::CLI;
-  using covert::utilities::Logging;
+  using exot::utilities::CLI;
+  using exot::utilities::Logging;
 ```
 
 The next steps involve:
@@ -57,7 +64,7 @@ The next steps involve:
 If the parsing was successful, the global state handlers can be initialised:
 
 ```c++
-  covert::framework::init_global_state_handlers();
+  exot::framework::init_global_state_handlers();
 ```
 
 And components can be instantiated with the configured settings:
@@ -70,7 +77,7 @@ And components can be instantiated with the configured settings:
 The last step involves creating the executor object and spawning the node processes.
 
 ```c++
-  covert::framework::ThreadExecutor exec;
+  exot::framework::ThreadExecutor exec;
   exec.spawn(meter);
   exec.join();
 

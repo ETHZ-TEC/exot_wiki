@@ -1,14 +1,17 @@
+[:back:](/home)
+---
+
 # Overview
 
 The *Application Library* facilitates the creation of sending and receiving applications that interoperate with the entire Experiment Orchestration Toolkit.
 
-The library is implemented in C++17, and takes advantage of many modern language features. It broadly uses generic programming and compile-time code generation as well as avoids complex class hierarchies. The library can be rather easily extended. It has been successfully applied in creating sender and receiver applications for, among others, cache-based, thermal, and frequency scaling covert channels.
+The library is implemented in C++17, and takes advantage of many modern language features. It broadly uses generic programming and compile-time code generation as well as avoids complex class hierarchies. The library can be rather easily extended. It has been successfully applied in creating sender and receiver applications for, among others, cache-based, thermal, and power covert channels.
 
-The library provides a way of creating application based on the process networks model of computation, where individual nodes are connected together and pass data via queues. Its design is outlined on [a separate page](./The-core-framework). For example, a node that ingests input data can be connected to a node that encodes this data and transmits it over the covert channel.
+The library provides a way of creating application based on the process networks model of computation, where individual nodes are connected together and pass data via queues. Its design details are described in a [white paper](http://pub.tik.ee.ethz.ch/people/miedlp/2020-05-22_ExOT_Whitepaper.pdf).
 
 ## Terminology
 
-- __Framework__ → The core of the application library that implements the process networks model of computation. See ["The Core Framework"]((./The-core-framework)) page for further details.
+- __Framework__ → The core of the application library that implements the process networks model of computation and is described in detail on the [dedicated wiki-page](./core-framework).
 
 - *Computational model terminology* → The implemented model of computation uses the terms:
 
@@ -44,12 +47,12 @@ The library provides a way of creating application based on the process networks
 
 The repository structure reflects the core parts of the library and consists of the following folders:
 
-- [**framework**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/framework) → includes the highly templated implementation of the core framework, including nodes, interfaces, queues, connectors, executors, and the state holder.
-- [**components**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/components) → includes the classes or class templates of main components, including hosts for generator and metering modules.
-- [**meters**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/meters) → includes a large number of metering modules for system state ranging from the state of the cache, to CPU core temperatures.
-- [**generators**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/generators) → includes a few generator modules (and convenient base classes for them) for imposing load on the CPU or its subsystems.
-- [**primitives**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/primitives) → includes a number of platform-specific facilities for timing, memory ordering, and access to caches and special CPU features.
-- [**utilities**](https://gitlab.ethz.ch/tec/research/exot/app_lib/tree/develop/include/exot/utilities) → includes a vast array of generic-purpose and specialised utilities.
+- [**framework**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/framework) → includes the highly templated implementation of the core framework, including nodes, interfaces, queues, connectors, executors, and the state holder.
+- [**components**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/components) → includes the classes or class templates of main components, including hosts for generator and metering modules.
+- [**meters**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/meters) → includes a large number of metering modules for system state ranging from the state of the cache, to CPU core temperatures.
+- [**generators**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/generators) → includes a few generator modules (and convenient base classes for them) for imposing load on the CPU or its subsystems.
+- [**primitives**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/primitives) → includes a number of platform-specific facilities for timing, memory ordering, and access to caches and special CPU features.
+- [**utilities**](https://gitlab.ethz.ch/tec/public/exot/app_lib/tree/master/include/exot/utilities) → includes a vast array of generic-purpose and specialised utilities.
 
 ## Namespaces
 
@@ -62,7 +65,3 @@ The project's main namespace is `exot`. It is further divided into sub-namespace
 - `exot::utilities` for all utilities.
 
 Occassionally, inline namespaces or special `details` namespaces are used. These are considered internal.
-
----
-
-On the next page, you will find out how to include the library in your C++ project → [Using the library](./Using-the-library).

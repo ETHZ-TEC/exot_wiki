@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 ## Purpose
 The Android Intent Proxy is a service that runs in the background and will translate and forward incoming intents, which are directed torwards applications used within the context of ExOT. This allows us to provide an uniform intent interface to the driver, and communicate with applications that require more complex intents (budled extras).
 

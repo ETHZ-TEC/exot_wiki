@@ -1,3 +1,6 @@
+[:back:](/home)
+---
+
 # Using the library
 
 ## CMake
@@ -83,7 +86,7 @@ set_property(CACHE EXOT_TIME_SOURCE PROPERTY STRINGS 0 1 2 3 4 5)
 | 4 | *HardwarePerformanceCounter* | A counter based on Linux'es *perf* events using the hardware CPU performance counter. |
 | 5 | *SoftwarePerformanceCounter* | A counter based on Linux'es *perf* events using the software CPU clock. |
 
-The values for `EXOT_TIME_SOURCE` correspond to the enumeration values in `TimingSourceType` at [exot/utilities/timing_source.h#L33](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/utilities/timing_source.h#L33).
+The values for `EXOT_TIME_SOURCE` correspond to the enumeration values in `TimingSourceType` at [exot/utilities/timing_source.h#L61](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/utilities/timing_source.h#L61).
 
 #### Timing serialisation
 
@@ -94,7 +97,7 @@ The values for `EXOT_TIME_SOURCE` correspond to the enumeration values in `Timin
 | 2 | *Strong* | Fencing done via architecture-specific full fences (e.g. `cpuid` and `mfence` sequence on *x86_64*.) |
 | 3 | *None* | No serialisation applied. |
 
-The values for `EXOT_TIME_FENCE` correspond to the enumeration values in `TimingFenceType` at [exot/utilities/timing_source.h#L23](https://gitlab.ethz.ch/tec/research/exot/app_lib/blob/develop/include/exot/utilities/timing_source.h#L23).
+The values for `EXOT_TIME_FENCE` correspond to the enumeration values in `TimingFenceType` at [exot/utilities/timing_source.h#L51](https://gitlab.ethz.ch/tec/public/exot/app_lib/blob/master/include/exot/utilities/timing_source.h#L51).
 
 ## Requirements
 
@@ -102,15 +105,12 @@ To successfully compile one needs:
 
 - *CMake* ~> 3.6, preferably one that understands the C++17 standard (~> 3.8);
 - a recent C++ standard library, conforming to the C++17 standard. This could be
-  the GNU libstdc++ from [GCC 8] and higher (libstdc++.so.6.0.23 and higher).
-  Please refer to the wiki for [futher guidelines];
+  the GNU libstdc++ from [GCC 8](https://gcc.gnu.org/projects/cxx-status.html#cxx17) and higher (libstdc++.so.6.0.23 and higher).
+  Please refer to the wiki for [futher guidelines](./library-usage);
 - (optionally) *Boost* libraries, with *Boost/fiber* available,
   enabled by passing -Dexot_use_fibers to the CMake command.
 
-[GCC 8]: https://gcc.gnu.org/projects/cxx-status.html#cxx17
-[futher guidelines]: https://gitlab.ethz.ch/tec/research/data_leakage_evaluation/app_lib/wikis/How-to-use-the-library%3F
-
-> __Note__: The new Docker-based container and user-script can be used to obtain a ready development environment capable of cross-compiling. Please refer to the [README](https://gitlab.ethz.ch/tec/research/exot/docker_environment), or visit [the how-to article on this wiki](4.-How-to's/Dockerised-build-environment).
+> __Note__: The new Docker-based container and user-script can be used to obtain a ready development environment capable of cross-compiling. Please refer to the [dedicated wiki page](compilation/environment).
 
 ## Toolchains
 
@@ -119,7 +119,7 @@ linker, and other environment parameters and tasks necessary for building the
 library and applications. If no *toolchain file* is provided, the build will
 be performed with the system compiler, or the one defined with environment
 variables `CC`/`CXX`. The repository contains, in
-[cmake/toolchains](cmake/toolchains), a number of toolchains for dynamic and
+cmake/toolchains, a number of toolchains for dynamic and
 static linkage, and for cross-compilation.
 
 ## Building
@@ -148,10 +148,6 @@ To build and execute the library tests, run:
 cmake --build  <path/to/build> --target exot-test
 ./path/to/build/exot/exot-test
 ```
-
----
-
-On the next page, you will find out how to contribute to the library → [Contributing to the library](./Contributing-to-the-library).
 
 ---
 
