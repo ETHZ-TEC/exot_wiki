@@ -5,3 +5,5 @@ The diagram below shows the general structure of a covert channel evaluation exp
 
 ![Experiment flow diagram](../uploads/figures/flow.png)
 ![Experiment flow diagram](../uploads/figures/communication_model.svg)
+
+[Layer example](https://gitlab.ethz.ch/tec/public/exot/eengine/-/blob/master/notebooks/examples/layer_lne.ipynb)
