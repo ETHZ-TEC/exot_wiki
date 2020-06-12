@@ -41,15 +41,11 @@ The machines used in an environment have to comply to following demands from the
 ### Jammer app(s)
 
 ## Experiment Host
-This machine has checkouts of all the necessary repositories, needed for the experiment execution. 
-These repositories are (at least but not limited to):
-* [Datprocessing Repository]()
-* Application Repositories (e.g. for [pure Unix]() and [Android]() platforms)
-
-Furthermore, this platform fullfills all the prerequesits to run the framework:
+The experiment host runs the experiment engine, and needs a checkout of the [eengine repository](https://gitlab.ethz.ch/tec/public/exot/eengine) and the required packets.
+It also saves all the experiment data, a machine with a high amount of memory is therefore preferable.
+Furthermore, for the analysis high computing resources might be required.
+Different steps of an experiment can also be executed on different experiment hosts. 
 
 ## Backup
 The Backup machine is simply a longterm storage for the experiment data.
-It has to be a storage server which is accessible via ethernet using TODO for data transfer.
-
-
+This feature has not yet been fully implemented in the eengine.
