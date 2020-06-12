@@ -87,11 +87,13 @@ Please refer to the table below for advanced information regarding the different
 <td><ul>
  <li><a href="eengine/overview">The ecosystem</a></li>
  <li><a href="eengine/information-flow">Information flow</a></li>
- <li><a href="eengine/experiment-structure">Experiment structure</a></li>
+ <li><a href="eengine/experiment-configuration">Experiment configuration</a></li>
+ <li><a href="eengine/environment-description-file">Environment description file</a></li>
 </ul></td>
 <td><ul>
  <li><a href="eengine/experiment-drivers">Experiment drivers</a></li>
  <li><a href="eengine/utilities">Utilities</a></li>
+ <li><a href="eengine/experiment-types">Experiment types</a></li>
 </ul></td>
 </tr>
 <!-- ###############################    General     ############################### -->
