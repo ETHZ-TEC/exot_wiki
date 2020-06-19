@@ -2,7 +2,7 @@
 ---
 
 ## Purpose
-The Android Intent Proxy is a service that runs in the background and will translate and forward incoming intents, which are directed torwards applications used within the context of ExOT. This allows us to provide an uniform intent interface to the driver, and communicate with applications that require more complex intents (budled extras).
+The Android Intent Proxy is a service that runs in the background and will translate and forward incoming intents, which are directed torwards applications used within the context of ExOT. This allows us to provide an uniform intent interface to the driver, and communicate with applications that require more complex intents, for example bundled extras.
 
 ## Sending an intent to the proxy
 
@@ -24,7 +24,7 @@ The intent proxy allows following actions:
 There are a couple of special extra keys that will be interpreted by the intent proxy, all other extras will be forwarded either plain or (depending on the action) repackaged. The special extra keys are:
 
 * `intent.action` -> This extra specifies the action in the forwarded intent.
-* `intent.component` -> This extra specifies the componentn in the forwarded intent.
+* `intent.component` -> This extra specifies the component in the forwarded intent.
 * `intent.flags` -> This extra specifies the flags in the forwarded intent.
 * `intent.extra.key` -> This extra specifies the key that will be used for the repackaged extras in the forwarded intent.
 

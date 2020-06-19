@@ -5,7 +5,7 @@
 
 ## Design
 
-The design of the application library and the core framework is motivated by the typical channel model found in this field of research, shown below.
+The design of the application library and the core framework is motivated by the typical channel model found in the area of data leak research, shown below.
 
 ![A typical channel model](../uploads/figures/channel-model.png)
 

@@ -3,7 +3,7 @@
 
 # Overview
 
-The *Application Library* facilitates the creation of sending and receiving applications that interoperate with the entire Experiment Orchestration Toolkit.
+The *Application Library* facilitates the development of deployment applications that interoperate with the entire Experiment Orchestration Toolkit.
 
 The library is implemented in C++17, and takes advantage of many modern language features. It broadly uses generic programming and compile-time code generation as well as avoids complex class hierarchies. The library can be rather easily extended. It has been successfully applied in creating sender and receiver applications for, among others, cache-based, thermal, and power covert channels.
 
@@ -29,7 +29,7 @@ The library provides a way of creating application based on the process networks
 
 - __Module__ → The term *module* is used to refer to encapsulated pieces of functionality, which are smaller than __Components__ and which cannot be directly executed. The library defines __Generator__ and __Meter__ modules, which either impose some kind of a load on the system, or measure one or more of its properties.
 
-- __Host__ → A *host* is a __Component__ that can combine one or more __Modules__ into a single __Component__. The library features hosts for load-generating and metering modules.
+- __Host__ → A *host* is a __Component__ that can combine one or more __Modules__ into a single __Component__. The library features hosts for generating and metering modules.
 
 - __Generator__ → A *generator* is a __Module__ that imposes a load on the system.
 

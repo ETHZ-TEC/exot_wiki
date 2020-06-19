@@ -3,7 +3,7 @@
 
 ### Description
 
-This repository contains an Android application that measures device utilisation.
+The [app_apk repository](https://gitlab.ethz.ch/tec/research/exot/app_apk) contains the building blocks for Android application based on the [application library](https://gitlab.ethz.ch/tec/research/exot/app_lib).
 
 To compile the application, run:
 

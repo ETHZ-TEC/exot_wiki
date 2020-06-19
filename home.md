@@ -86,23 +86,28 @@ Please refer to the table below for advanced information regarding the different
 <tr><td colspan="2", align="center"><h1 id="eengine"><a href="https://gitlab.ethz.ch/tec/public/exot/eengine">The experiment engine</a></h1></td></tr>
 <td><ul>
  <li><a href="eengine/overview">The ecosystem</a></li>
- <li><a href="eengine/information-flow">Information flow</a></li>
  <li><a href="eengine/experiment-configuration">Experiment configuration</a></li>
  <li><a href="eengine/environment-description-file">Environment description file</a></li>
+ <li><a href="eengine/information-flow">Information flow</a></li>
+ <li><a href="eengine/utilities">Utilities</a></li>
 </ul></td>
 <td><ul>
  <li><a href="eengine/experiment-drivers">Experiment drivers</a></li>
- <li><a href="eengine/utilities">Utilities</a></li>
  <li><a href="eengine/experiment-types">Experiment types</a></li>
+ <li><a href="eengine/channel">Channel analyses</a></li>
+ <li><a href="eengine/exceptions">ExOT Exception handling</a></li>
+ <li><a href="eengine/plotting">ExOT plotting support</a></li>
 </ul></td>
 </tr>
-<!-- ###############################    General     ############################### -->
-<tr><td colspan="2", align="center"><h1 id="theory">General</h1></td></tr>
+<!-- ###############################    Miscellaneous     ############################### -->
+<tr><td colspan="2", align="center"><h1 id="theory">Miscellaneous</h1></td></tr>
 <tr>
 <td><ul>
- <li><a href="general/code-style">Code style and formatting</a></li>
+ <li><a href="misc/code-style">Code style and formatting</a></li>
+ <li><a href="misc/tips-and-tricks">Tips and tricks</a></li>
 </ul></td>
 <td><ul>
+ <li><a href="misc/standalone-scripts">Standalone scripts and utilities</a></li>
  <li><a href="https://www.exot.ethz.ch">ExOT public website</a></li>
 </ul></td>
 </tr>

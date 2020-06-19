@@ -3,7 +3,7 @@
 
 ### Unix applications
 
-This repository contains sink and source applications built on top of the [ExOT Application Library](https://gitlab.ethz.ch/tec/public/exot/app_lib), and relevant utilities. Current development versions are available in the `develop` branch.
+This repository contains sink and source applications built on top of the [ExOT Application Library](https://gitlab.ethz.ch/tec/public/exot/app_lib), and relevant utilities.
 
 The [generators](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/generators) folder contains the source applications, and [meters](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/meters) contains sink applications. The library is imported as a git submodule at *lib*. The [scripts](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/scripts) folder contains auxiliary files, most notably the script for [distributing meters as systemd services](https://gitlab.ethz.ch/tec/public/exot/app_unx/-/tree/master/scripts/pack-for-distribution.sh).
 
